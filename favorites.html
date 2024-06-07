@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Bookify is an intelligent online book platform designed to revive your reading habits, offering a personalized experience for book enthusiasts. Tailoring recommendations to your literary preferences and interests, Bookify ensures a year-round journey of literary discovery and satisfaction."
+    />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="mainfest" href="manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <title>Your Favorites</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img src="img/bookify-logo.png" alt="Bookify logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="dropdown">
+            <a class="main-nav-link" href="categories.html"
+              >Categories &dtrif;</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="main-nav-link nav-categories" href="fiction.html"
+                  >Fiction</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="non-fiction.html"
+                  >Non-fiction</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="mystery.html"
+                  >Mystery/Thriller</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="romance.html"
+                  >Romance</a
+                >
+              </li>
+              <li>
+                <a
+                  class="main-nav-link nav-categories"
+                  href="science-fiction.html"
+                  >Science Fiction</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="fantasy.html"
+                  >Fantasy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="main-nav-link nav-categories"
+                  href="historical-fiction.html"
+                  >Historical Fiction</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="memoir.html"
+                  >Biography/Memoir</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="self-help.html"
+                  >Self-Help</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="young-adult.html"
+                  >Young Adult</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="philosophy.html"
+                  >Philosophy</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="business.html"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="psychology.html"
+                  >Psychology</a
+                >
+              </li>
+              <li>
+                <a
+                  class="main-nav-link nav-categories link--indian-authors"
+                  href="indian-authors.html"
+                  >Indian Authors</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="main-nav-link nav-feedback" href="login.html">Login</a>
+          </li>
+          <li>
+            <button
+              id="signoutbutton"
+              style="display: none"
+              class="btn btn--sign-out"
+            >
+              Sign Out
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-books" id="wishlist">
+        <div class="container center-text">
+          <span class="sub-heading">Favorites</span>
+        </div>
+
+        <div
+          id="wishlist-container"
+          class="container grid grid--3-cols margin-bottom-md"
+        >
+          <!-- Wishlist items will be dynamically added here -->
+        </div>
+
+        <div
+          id="loginMessage"
+          style="display: none"
+          class="empty-favorites-message"
+        >
+          <p class="heading-tertiary" style="margin-bottom: 0">
+            Please log in to add books to your favorites.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img src="img/bookify-logo.png" alt="Bookify logo" class="logo" />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2027</span> by Bookify, Inc. All
+            rights reserved.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              432 Greenway Avenue, 3rd Floor, Mulund West, Mumbai, Maharashtra
+              400080, India
+            </p>
+            <p>
+              <a class="footer-link" href="tel:9867201035">+91 9867201035</a>
+              <br />
+              <a class="footer-link" href="mailto:hello@bookify.com">
+                hello@bookify.com
+              </a>
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li>
+              <a class="footer-link" href="register.html">Create account</a>
+            </li>
+            <li><a class="footer-link" href="login.html">Sign in</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // Load wishlist from local storage
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const wishlistContainer = document.getElementById("wishlist-container");
+
+      // Function to display empty favorites message
+      function displayEmptyFavoritesMessage() {
+        const emptyFavoritesMessage = document.createElement("div");
+        emptyFavoritesMessage.classList.add("empty-favorites-message");
+        emptyFavoritesMessage.innerHTML = `
+          <p class="heading-tertiary">Your favorites is lonely and looking for love.</p>
+          <p class="favorites-txt">You haven't saved anything yet. Don't worry, it's easy!</p>
+          <p class="favorites-txt">Just click on the heart icon on the books you like and</p>
+          <p class="favorites-txt">they will show up here. </p>
+        `;
+        wishlistContainer.appendChild(emptyFavoritesMessage);
+      }
+
+      function adjustGridClasses() {
+        if (wishlist.length === 0 || !isLoggedIn()) {
+          wishlistContainer.classList.remove("grid--3-cols");
+        }
+      }
+
+      // Display wishlist items or empty favorites message
+      if (wishlist.length === 0 && isLoggedIn()) {
+        displayEmptyFavoritesMessage();
+      } else {
+        wishlist.forEach((item) => {
+          const bookEntry = document.createElement("div");
+          bookEntry.classList.add("wishlist-item"); // Add a class to each wishlist item container
+
+          bookEntry.innerHTML = `
+            <div class="book"> <!-- Wrap each book entry in its own container -->
+              <img src="img/books/${item.image}" class="book-img" alt="${
+            item.title
+          }" />
+              <div class="book-content">
+                <div class="book-tags">
+                  <span class="tag ${
+                    item.genre ? `tag--${item.genre.toLowerCase()}` : ""
+                  }">${item.genre}</span>
+                </div>
+                <p class="book-title">${item.title}</p>
+                <ul class="book-attributes">
+                  <li class="book-attribute">
+                    <img src="img/books/author-icon.png" class="book-icon author-icon" />
+                    <span>By <strong class="author-text">${
+                      item.author
+                    }</strong></span>
+                  </li>
+                  <li class="book-attribute">
+                    <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                    <span><strong>${item.pages}</strong> Pages</span>
+                  </li>
+                  <li class="flex">
+                    <a href="${item.readUrl}" class="btn btn--read">Read</a>
+                    <button onclick="removeFromWishlist('${
+                      item.id
+                    }')" class="btn btn--favorite">Remove</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          `;
+
+          wishlistContainer.appendChild(bookEntry); // Append each wishlist item container to the wishlistContainer
+        });
+      }
+
+      adjustGridClasses();
+
+      function removeFromWishlist(bookId) {
+        // Find index of book in wishlist
+        const index = wishlist.findIndex((item) => item.id === bookId);
+        if (index !== -1) {
+          // Remove book from wishlist
+          wishlist.splice(index, 1);
+          // Update local storage
+          localStorage.setItem("wishlist", JSON.stringify(wishlist));
+          // Refresh page
+          location.reload();
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const readButtons = document.querySelectorAll(".btn--read");
+
+        readButtons.forEach(function (readButton) {
+          readButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            const readUrl = readButton.getAttribute("href");
+            console.log("Read URL:", readUrl);
+            if (readUrl) {
+              window.open(readUrl, "_blank");
+            }
+          });
+        });
+      });
+
+      function checkLoginAndRedirect(bookUrl) {
+        if (isLoggedIn()) {
+          window.location.href = bookUrl;
+        } else {
+          sessionStorage.setItem("redirectUrl", window.location.href);
+          window.location.href = "login.html";
+        }
+      }
+
+      function isLoggedIn() {
+        return sessionStorage.getItem("user-creds") !== null;
+      }
+
+      // Function to display login message if user is not logged in
+      function displayLoginMessage() {
+        const loginMessage = document.getElementById("loginMessage");
+        if (!isLoggedIn()) {
+          loginMessage.style.display = "block";
+        }
+      }
+
+      // Call the function to display login message
+      displayLoginMessage();
+
+      function toggleSignOutButton() {
+        const signOutButton = document.getElementById("signoutbutton");
+        const loginButton = document.querySelector(".nav-feedback");
+
+        if (isLoggedIn()) {
+          signOutButton.style.display = "block";
+          loginButton.style.display = "none";
+        } else {
+          signOutButton.style.display = "none";
+          loginButton.style.display = "block";
+        }
+      }
+
+      document
+        .getElementById("signoutbutton")
+        .addEventListener("click", function () {
+          // Clear user credentials and favorites from session storage
+          sessionStorage.removeItem("user-creds");
+          sessionStorage.removeItem("user-info");
+          localStorage.removeItem("wishlist"); // Clear wishlist from local storage
+          toggleSignOutButton();
+          // Redirect to login page after logout
+          window.location.href = "login.html";
+        });
+
+      function toggleFavoriteButton(bookId) {
+        const favoriteButton = document
+          .getElementById(bookId)
+          .querySelector(".btn--favorite");
+        const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        const isBookInWishlist = wishlist.some((item) => item.id === bookId);
+
+        if (isBookInWishlist) {
+          favoriteButton.classList.add("active");
+        } else {
+          favoriteButton.classList.remove("active");
+        }
+      }
+
+      window.addEventListener("load", function () {
+        document.querySelectorAll(".book").forEach(function (bookElement) {
+          const bookId = bookElement.id;
+          toggleFavoriteButton(bookId);
+        });
+      });
+
+      toggleSignOutButton();
+    </script>
+  </body>
+</html>

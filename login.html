@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/acccount.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:300,300i,700"
+    />
+    <title>Bookify | Log into your account</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img src="img/bookify-logo.png" alt="Bookify logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="register.html">
+              <button type="button" class="btn btn--outline">Sign Up</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="login-form">
+        <h2 class="heading-secondary ma-bt-lg">Log into your account</h2>
+        <form class="form form--login" id="MainForm">
+          <div class="form__group">
+            <label class="form__label" for="email">Email address</label>
+            <input
+              class="form__input"
+              id="emailInp"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="form__group ma-bt-md">
+            <label class="form__label" for="password">Password</label>
+            <input
+              class="form__input"
+              id="passInp"
+              type="password"
+              placeholder="••••••••"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="form__group">
+            <button type="submit" class="btn btn--blue">Login</button>
+          </div>
+          <div class="form__group"></div>
+        </form>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module">
+      (() => {
+        const firebaseConfig = {
+          apiKey: "AIzaSyBg5OQnGXNCGMVxOikcR_KXveB3xOI9iis",
+          authDomain: "bookify-6c73b.firebaseapp.com",
+          databaseURL: "https://bookify-6c73b-default-rtdb.firebaseio.com",
+          projectId: "bookify-6c73b",
+          storageBucket: "bookify-6c73b.appspot.com",
+          messagingSenderId: "842261101515",
+          appId: "1:842261101515:web:b544937b6d104b2909d44e",
+          measurementId: "G-35EBHZ2YHT",
+        };
+
+        const initializeFirebase = () => {
+          import(
+            "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"
+          ).then(({ initializeApp }) => {
+            import(
+              "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"
+            ).then(({ getDatabase, ref, child, get }) => {
+              import(
+                "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"
+              ).then(({ getAuth, signInWithEmailAndPassword }) => {
+                const app = initializeApp(firebaseConfig);
+                const db = getDatabase();
+                const auth = getAuth(app);
+                const dbref = ref(db);
+
+                const SignInUser = (evt) => {
+                  evt.preventDefault();
+                  const EmailInp = document.getElementById("emailInp").value;
+                  const PassInp = document.getElementById("passInp").value;
+
+                  signInWithEmailAndPassword(auth, EmailInp, PassInp)
+                    .then((credentials) => {
+                      get(
+                        child(dbref, `UsersAuthList/${credentials.user.uid}`)
+                      ).then((snapshot) => {
+                        if (snapshot.exists()) {
+                          sessionStorage.setItem(
+                            "user-info",
+                            JSON.stringify({
+                              firstname: snapshot.val().firstname,
+                              lastname: snapshot.val().lastname,
+                            })
+                          );
+                          sessionStorage.setItem(
+                            "user-creds",
+                            JSON.stringify(credentials.user)
+                          );
+
+                          const redirectUrl =
+                            sessionStorage.getItem("redirectUrl");
+                          if (redirectUrl) {
+                            window.location.href = redirectUrl;
+                          } else {
+                            window.location.href = "index.html";
+                          }
+                        }
+                      });
+                    })
+                    .catch((error) => {
+                      console.error(error.code);
+                      console.error(error.message);
+                      alert(error.message);
+                    });
+                };
+
+                document
+                  .getElementById("MainForm")
+                  .addEventListener("submit", SignInUser);
+              });
+            });
+          });
+        };
+
+        initializeFirebase();
+      })();
+    </script>
+  </body>
+</html>
