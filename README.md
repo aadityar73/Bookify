@@ -4,7 +4,7 @@ Bookify is an online platform where users can explore a wide variety of books ac
 
 ## Live Demo
 
-Check out the live version here: [Bookify](https://bookify-store.vercel.app/){:target="_blank"}
+Check out the live version here: [Bookify](https://bookify-store.vercel.app/)
 
 ## Features
 
