@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Bookify is an intelligent online book platform designed to revive your reading habits, offering a personalized experience for book enthusiasts. Tailoring recommendations to your literary preferences and interests, Bookify ensures a year-round journey of literary discovery and satisfaction."
+    />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link rel="icon" href="../img/favicon.png" /> -->
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+    <link rel="mainfest" href="manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    `
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <title>Mystery/Thriller Books</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img src="../img/bookify-logo.png" alt="Bookify logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="dropdown">
+            <a class="main-nav-link" href="categories.html"
+              >Categories &dtrif;</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="main-nav-link nav-categories" href="fiction.html"
+                  >Fiction</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="non-fiction.html"
+                  >Non-fiction</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="mystery.html"
+                  >Mystery/Thriller</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="romance.html"
+                  >Romance</a
+                >
+              </li>
+              <li>
+                <a
+                  class="main-nav-link nav-categories"
+                  href="science-fiction.html"
+                  >Science Fiction</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="fantasy.html"
+                  >Fantasy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="main-nav-link nav-categories"
+                  href="historical-fiction.html"
+                  >Historical Fiction</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="memoir.html"
+                  >Biography/Memoir</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="self-help.html"
+                  >Self-Help</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="young-adult.html"
+                  >Young Adult</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="philosophy.html"
+                  >Philosophy</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="business.html"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link nav-categories" href="psychology.html"
+                  >Psychology</a
+                >
+              </li>
+              <li>
+                <a
+                  class="main-nav-link nav-categories link--indian-authors"
+                  href="indian-authors.html"
+                  >Indian Authors</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="main-nav-link" href="favorites.html">Favorites</a>
+          </li>
+          <li>
+            <a class="main-nav-link nav-feedback" href="login.html">Login</a>
+          </li>
+          <li>
+            <button
+              id="signoutbutton"
+              style="display: none"
+              class="btn btn--sign-out"
+            >
+              Sign Out
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-books" id="books">
+        <div class="container center-text">
+          <span class="sub-heading">Mystery/Thriller</span>
+        </div>
+
+        <div class="container grid grid--4-cols margin-bottom-md">
+          <div class="book" id="book68">
+            <img
+              src="../img/books/mystery-1.jpg"
+              class="book-img"
+              alt="Gone Girl"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">Gone Girl</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Gillian Flynn</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>419</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.1</strong> rating (2,507,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1LEclbLlE0RIT8SnqFnYTTELVhj3H3ydn/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book68')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book69">
+            <img
+              src="../img/books/mystery-2.jpg"
+              class="book-img"
+              alt="The Da Vinci Code"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">The Da Vinci Code</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span>By <strong class="author-text">Dan Brown</strong></span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>489</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.8</strong> rating (1,746,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1nXBYtBu0QuS26Y-Kd_Ju0Uy7pSbvBGFj/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book69')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book70">
+            <img
+              src="../img/books/mystery-3.jpg"
+              class="book-img"
+              alt="Before I Go to Sleep"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">Before I Go to Sleep</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">S.J. Watson</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>360</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.9</strong> rating (259,895)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1x5wj2ZzrURqs8_bRBBwGkdAH3gtg6fpG/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book70')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book71">
+            <img
+              src="../img/books/mystery-4.jpg"
+              class="book-img"
+              alt="Big Little Lies"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">Big Little Lies</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By
+                    <strong class="author-text">Liane Moriarty</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>460</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.2</strong> rating (1,407,865)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1x5BL3EjoV36GwH36MJ97kz-UqhPwwU8O/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book71')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book72">
+            <img
+              src="../img/books/mystery-5.jpg"
+              class="book-img"
+              alt="In the Woods"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">In the Woods</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Tana French</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>429</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.8</strong> rating (273,156)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1x49nsKEsLwg0UklcBVmKxZOAwnpEuROu/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book72')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book73">
+            <img
+              src="../img/books/mystery-6.jpg"
+              class="book-img"
+              alt="Sharp Objects"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">Sharp Objects</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Gillian Flynn</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>254</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.9</strong> rating (559,246)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1x3HBYE_n6dPdKl01nLlEdrL8rpGz2_dE/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book73')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book74">
+            <img
+              src="../img/books/mystery-7.jpg"
+              class="book-img"
+              alt="The Couple Next Door"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">The Couple Next Door</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Shari Lapena</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>308</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.8</strong> rating (297,885)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xB94_i1jwcD8Sr4v65QJ6HAbYDV8JJGC/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book74')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book75">
+            <img
+              src="../img/books/mystery-8.jpg"
+              class="book-img"
+              alt="The Lincoln Lawyer"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">The Lincoln Lawyer</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By
+                    <strong class="author-text">Michael Connelly</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>404</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.1</strong> rating (162,478)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xRIlf49ofPaoGCACdpQnApsZM5y_Mzu8/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book75')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book76">
+            <img
+              src="../img/books/mystery-9.jpg"
+              class="book-img"
+              alt="The Poet"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">The Poet</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By
+                    <strong class="author-text">Michael Connelly</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>448</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.2</strong> rating (116,574)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xUg-3ZYCEfeFV9i45yJbitwuKgJHjfzR/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book76')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book77">
+            <img
+              src="../img/books/mystery-10.jpg"
+              class="book-img"
+              alt="The Woman in the Window"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">The Woman in the Window</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span>By <strong class="author-text">A.J. Finn</strong></span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>448</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.9</strong> rating (711,892)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1B2v8XpNOFWlokCreNAsVx8OGlej51Rku/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book77')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book118">
+            <img
+              src="../img/books/mystery-11.jpg"
+              class="book-img"
+              alt="The Silent Patient"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">The Silent Patient</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By
+                    <strong class="author-text">Alex Michaelides</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>323</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.1</strong> rating (730,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1JEQSc8u1F4lCqruGWgK273jII5LG-cfU/view?usp=sharing')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book118')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book119">
+            <img
+              src="../img/books/mystery-12.jpg"
+              class="book-img"
+              alt="Final Girls"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--mystery">Mystery/Thriller</span>
+              </div>
+              <p class="book-title">Final Girls</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Riley Sager</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>342</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.8</strong> rating (711,892)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1aprYoYV8BV_9rF_j23Qm1ARoxgBVFj7K/view?usp=sharing')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book119')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              src="../img/bookify-logo.png"
+              alt="Bookify logo"
+              class="logo"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2027</span> by Bookify, Inc. All
+            rights reserved.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              432 Greenway Avenue, 3rd Floor, Mulund West, Mumbai, Maharashtra
+              400080, India
+            </p>
+            <p>
+              <a class="footer-link" href="tel:9867201035">+91 9867201035</a>
+              <br />
+              <a class="footer-link" href="mailto:hello@bookify.com">
+                hello@bookify.com
+              </a>
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li>
+              <a class="footer-link" href="register.html">Create account</a>
+            </li>
+            <li><a class="footer-link" href="login.html">Sign in</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script defer src="../js/script.js"></script>
+  </body>
+</html>

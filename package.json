@@ -1,0 +1,17 @@
+{
+  "name": "bookify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^3.1.9"
+  }
+}

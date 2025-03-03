@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/acccount.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:300,300i,700"
+    />
+    <title>Bookify | Log into your account</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img src="../img/bookify-logo.png" alt="Bookify logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="register.html">
+              <button type="button" class="btn btn--outline">Sign Up</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="login-form">
+        <h2 class="heading-secondary ma-bt-lg">Log into your account</h2>
+        <form class="form form--login" id="MainForm">
+          <div class="form__group">
+            <label class="form__label" for="email">Email address</label>
+            <input
+              class="form__input"
+              id="emailInp"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="form__group ma-bt-md">
+            <label class="form__label" for="password">Password</label>
+            <input
+              class="form__input"
+              id="passInp"
+              type="password"
+              placeholder="••••••••"
+              required
+              minlength="8"
+            />
+          </div>
+          <div class="form__group">
+            <button type="submit" class="btn btn--blue">Login</button>
+          </div>
+          <div class="form__group"></div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
