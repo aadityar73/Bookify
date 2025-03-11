@@ -23,6 +23,6 @@ const submitFeedback = async feedback => {
   if (response.ok) {
     alert('Feedback submitted successfully!');
   } else {
-    alert('Error submitting feedback');
+    alert('Please authenticate');
   }
 };

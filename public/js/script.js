@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   loginButton.addEventListener('click', () => {
     localStorage.setItem('previousPage', window.location.href);
-    window.location.href = '/login.html';
+    window.location.href = '/account/login';
   });
 
   signoutButton.addEventListener('click', async () => {

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{>head}}
+  <body>        
+    <header class="header">
+      <a href="/">
+        <img src="../img/bookify-logo.png" alt="Bookify logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="/favorites">Favorites</a>
+          </li>
+          <li>
+            <a
+              class="main-nav-link nav-feedback"
+              id="login-btn"
+              href="/account/login"
+              >Login</a
+            >
+          </li>
+          <li>
+            <button
+              id="signout-btn"
+              style="display: none"
+              class="btn btn--sign-out"
+            >
+              Sign Out
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-books" id="books">
+        <div class="container center-text">
+          <span class="sub-heading">Categories</span>
+        </div>
+
+        <div class="container">
+          <div class="grid-container">
+            <a href="/fiction" class="genre-box tag--fiction center-text">
+              <h3 class="heading-category">Fiction</h3>
+            </a>
+            <a href="mystery" class="genre-box tag--mystery center-text">
+              <h3 class="heading-category">Mystery/Thriller</h3>
+            </a>
+            <a href="/romance" class="genre-box tag--romance center-text">
+              <h3 class="heading-category">Romance</h3>
+            </a>
+            <a
+              href="/scienceFiction"
+              class="genre-box tag--science-fiction center-text"
+            >
+              <h3 class="heading-category">Science Fiction</h3>
+            </a>
+            <a href="/fantasy" class="genre-box tag--fantasy center-text">
+              <h3 class="heading-category">Fantasy</h3>
+            </a>
+            <a
+              href="/historicalFiction"
+              class="genre-box tag--historical-fiction center-text"
+            >
+              <h3 class="heading-category">Historical Fiction</h3>
+            </a>
+            <a
+              href="/youngAdult"
+              class="genre-box tag--young-adult center-text"
+            >
+              <h3 class="heading-category">Young Adult</h3>
+            </a>
+            <a
+              href="/nonFiction"
+              class="genre-box tag--non-fiction center-text"
+            >
+              <h3 class="heading-category">Non-Fiction</h3>
+            </a>
+            <a href="/biography" class="genre-box tag--memoir center-text">
+              <h3 class="heading-category">Biography/Memoir</h3>
+            </a>
+            <a
+              href="/selfHelp"
+              class="genre-box tag--self-help center-text"
+            >
+              <h3 class="heading-category">Self-Help</h3>
+            </a>
+            <a href="/business" class="genre-box tag--business center-text">
+              <h3 class="heading-category">Business</h3>
+            </a>
+            <a
+              href="/psychology"
+              class="genre-box tag--psychology center-text"
+            >
+              <h3 class="heading-category">Psychology</h3>
+            </a>
+            <a
+              href="/philosophy"
+              class="genre-box tag--philosophy center-text"
+            >
+              <h3 class="heading-category">Philosophy</h3>
+            </a>
+            <a
+              href="/indianAuthors"
+              class="genre-box tag--indian-authors center-text"
+            >
+              <h3 class="heading-category">Indian Authors</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{>footer}}
+
+    <script src="../js/config.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

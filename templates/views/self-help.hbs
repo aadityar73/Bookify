@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{>head}}
+  <body>
+    {{>booksHeader}}
+
+    <main>
+      <section class="section-books" id="books">
+        <div class="container center-text">
+          <span class="sub-heading">Self-Help</span>
+        </div>
+
+        <div class="container grid grid--4-cols margin-bottom-md">
+          <div class="book" id="book102">
+            <img
+              src="../img/books/selfHelp-1.jpg"
+              class="book-img"
+              alt="Deep Work"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">Deep Work</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text"> Cal Newport</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>304</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.2</strong> rating (102,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1-sCCjSJ2FfII8yrMvY9FeXvYkT_0TryX/view?usp=sharing')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book102')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book103">
+            <img
+              src="../img/books/selfHelp-2.jpg"
+              class="book-img"
+              alt="Atomic Habits"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">Atomic Habits</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">James Clear</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>319</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.4</strong> rating (527,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1oKa9TWk829Wbw5WfkutvN67XRblbQ4ce/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book103')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book104">
+            <img
+              src="../img/books/selfHelp-3.jpg"
+              class="book-img"
+              alt="How to Win Friends and Influence People"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">How to Win Friends and Influence People</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Dale Carnegie</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>288</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.2</strong> rating (586,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1f7NWc8UulMdFNQkkqiUSi37pnFDnK-SN/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book104')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book105">
+            <img
+              src="../img/books/selfHelp-4.jpg"
+              class="book-img"
+              alt="Mindset: The New Psychology of Success"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">Mindset: The New Psychology of Success</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By
+                    <strong class="author-text">Carol S. Dweck</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>288</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.1</strong> rating (189,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/108KLlYRlLkUEdRnwHm-itfzNWye8iTKl/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book105')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book106">
+            <img
+              src="../img/books/selfHelp-5.jpg"
+              class="book-img"
+              alt="The 7 Habits of Highly Effective People"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">The 7 Habits of Highly Effective People</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By
+                    <strong class="author-text">Stephen R. Covey</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>381</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.1</strong> rating (565,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/14Nx6pNWWnZEExLYopjRb9uLiS-bUfX5p/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book106')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book107">
+            <img
+              src="../img/books/selfHelp-6.jpg"
+              class="book-img"
+              alt="The Power of Now"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">The Power of Now</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Eckhart Tolle</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>236</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.1</strong> rating (381,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1P3SiaH4d6JU-t0unv5UxNghTvGW824EP/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book107')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book108">
+            <img
+              src="../img/books/selfHelp-7.jpg"
+              class="book-img"
+              alt="Daring Greatly"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">Daring Greatly</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Brené Brown</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>320</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.2</strong> rating (297,000)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1g0A-vVthYSPWx8BVi-88K4nrpSUHDhcu/view?usp=sharing')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book108')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book109">
+            <img
+              src="../img/books/selfHelp-8.jpg"
+              class="book-img"
+              alt="The Subtle Art of Not Giving a F*ck"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">The Subtle Art of Not Giving a F*ck</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Mark Manson</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>224</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.9</strong> rating (784,514)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1iJjgmI-MOBNsdzCL2tM4gn0tqrD3NaVt/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book109')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book110">
+            <img
+              src="../img/books/selfHelp-9.jpg"
+              class="book-img"
+              alt="Think and Grow Rich"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">Think and Grow Rich</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Napoleon Hill</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>233</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.2</strong> rating (10107)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1AohDfGmz6x63jwS5SfJzsY86FZsNgRSW/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book110')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book111">
+            <img
+              src="../img/books/selfHelp-10.jpg"
+              class="book-img"
+              alt="Girl, Wash Your Face: Stop Believing the Lies About Who You Are So You Can Become Who You Were Meant to Be"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">Girl, Wash Your Face</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Rachel Hollis</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>240</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>3.8</strong> rating (204,367)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1zgOdppqm1erRT1apFkGT_O2dGE5-QT7E/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book111')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book112">
+            <img
+              src="../img/books/selfHelp-11.jpg"
+              class="book-img"
+              alt="The Four Agreements: A Practical Guide to Personal Freedom"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">The Four Agreements</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By
+                    <strong class="author-text">Don Miguel Ruiz</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>160</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.1</strong> rating (526,819)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1zZcDmipEbhzj5VcaUD7ZpX16ISG-mBqB/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book112')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="book" id="book113">
+            <img
+              src="../img/books/selfHelp-12.jpg"
+              class="book-img"
+              alt="The Gifts of Imperfection: Let Go of Who You Think You're Supposed to Be and Embrace Who You Are"
+            />
+
+            <div class="book-content">
+              <div class="book-tags">
+                <span class="tag tag--self-help">Self-Help</span>
+              </div>
+              <p class="book-title">The Gifts of Imperfection</p>
+              <ul class="book-attributes">
+                <li class="book-attribute">
+                  <img
+                    src="../img/books/author-icon.png"
+                    class="book-icon author-icon"
+                  />
+                  <span
+                    >By <strong class="author-text">Brené Brown</strong></span
+                  >
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
+                  <span><strong>160</strong> Pages</span>
+                </li>
+                <li class="book-attribute">
+                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.2</strong> rating (130,594)</span>
+                </li>
+                <li class="flex">
+                  <a
+                    class="btn btn--read"
+                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1zh1Wj2MJ6wDWEoDXbfWtIxo_qiFiL3Jj/view?usp=drive_link')"
+                    >Read</a
+                  ><button
+                    class="btn btn--favorite"
+                    onclick="addToWishlist('book113')"
+                  >
+                    ❤️
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{>footer}}
+
+    <script src="../js/config.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
