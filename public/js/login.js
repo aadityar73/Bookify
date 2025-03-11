@@ -22,7 +22,11 @@ const loginUser = async (email, password) => {
   if (response.ok) {
     alert('Login successful');
 
-    window.location.replace('/');
+    const previousPage = localStorage.getItem('previousPage' || '/');
+
+    localStorage.removeItem('previousItem');
+
+    window.location.replace(previousPage);
   } else {
     alert('Login failed');
   }

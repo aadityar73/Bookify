@@ -1,5 +1,9 @@
 'use strict';
 
+const currentYear = new Date().getFullYear();
+
+document.querySelector('.year').textContent = currentYear;
+
 document.addEventListener('DOMContentLoaded', async () => {
   const loginButton = document.querySelector('#login-btn');
   const signoutButton = document.querySelector('#signout-btn');
@@ -25,6 +29,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   checkAuthStatus();
 
+  loginButton.addEventListener('click', () => {
+    localStorage.setItem('previousPage', window.location.href);
+    window.location.href = '/login.html';
+  });
+
   signoutButton.addEventListener('click', async () => {
     try {
       const response = await fetch(`${API_URL}/users/logout`, {
@@ -34,6 +43,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       if (response.ok) {
         alert('Logged out successfully!');
+
+        localStorage.removeItem('previousPage');
+
         checkAuthStatus();
       } else {
         alert('Error logging out.');
