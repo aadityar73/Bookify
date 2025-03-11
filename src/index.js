@@ -2,9 +2,11 @@
 
 const path = require('path');
 const express = require('express');
+const cookieParser = require('cookie-parser');
 
 require('./db/mongoose');
 
+const userRouter = require('./routers/user');
 const feedbackRouter = require('./routers/feedback');
 
 const app = express();
@@ -20,7 +22,10 @@ app.use(express.static(pagesDirectory));
 
 // Serve up JSON data sent by the client to the server
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cookieParser());
 
+app.use(userRouter);
 app.use(feedbackRouter);
 
 app.listen(port, () => console.log(`Server is up on port ${port}`));

@@ -10,7 +10,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato:300,300i,700"
     />
-    <title>Bookify | Create your account!</title>
+    <title>Bookify | Join Now and Start Reading</title>
   </head>
 
   <body>
@@ -33,24 +33,20 @@
     <main class="main">
       <div class="login-form">
         <h2 class="heading-secondary ma-bt-lg">Create your account!</h2>
-        <form class="form form--signup" id="MainForm">
+        <form
+          action="/users"
+          method="POST"
+          class="form form--signup"
+          id="signup-form"
+        >
           <div class="form__group">
-            <label class="form__label" for="name">Full name</label>
+            <label class="form__label" for="name">Name</label>
             <input
               class="form__input"
-              id="fnameInp"
+              id="name-input"
+              name="name"
               type="text"
               placeholder="Aaditya"
-              required
-            />
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="name">Last name</label>
-            <input
-              class="form__input"
-              id="lnameInp"
-              type="text"
-              placeholder="Raikar"
               required
             />
           </div>
@@ -58,7 +54,8 @@
             <label class="form__label" for="email">Email address</label>
             <input
               class="form__input"
-              id="emailInp"
+              id="email-input"
+              name="email"
               type="email"
               placeholder="you@example.com"
               required
@@ -68,8 +65,9 @@
             <label class="form__label" for="password">Password</label>
             <input
               class="form__input"
-              id="passInp"
+              id="password-input"
               type="password"
+              name="password"
               placeholder="••••••••"
               required
               minlength="8"
@@ -81,5 +79,8 @@
         </form>
       </div>
     </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/register.js"></script>
   </body>
 </html>

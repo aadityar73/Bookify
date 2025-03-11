@@ -32,13 +32,19 @@
     <main class="main">
       <div class="login-form">
         <h2 class="heading-secondary ma-bt-lg">Log into your account</h2>
-        <form class="form form--login" id="MainForm">
+        <form
+          action="/users/login"
+          method="POST"
+          class="form form--login"
+          id="login-form"
+        >
           <div class="form__group">
             <label class="form__label" for="email">Email address</label>
             <input
               class="form__input"
-              id="emailInp"
+              id="email-input"
               type="email"
+              name="email"
               placeholder="you@example.com"
               required
             />
@@ -47,8 +53,9 @@
             <label class="form__label" for="password">Password</label>
             <input
               class="form__input"
-              id="passInp"
+              id="password-input"
               type="password"
+              name="password"
               placeholder="••••••••"
               required
               minlength="8"
@@ -61,5 +68,8 @@
         </form>
       </div>
     </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/login.js"></script>
   </body>
 </html>
