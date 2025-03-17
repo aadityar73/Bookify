@@ -5,7 +5,7 @@ Bookify is an online platform where users can explore, read, and download a wide
 ## Features
 
 - **User Authentication**: Secure login and registration using JWT and cookies.
-- **Browse Books**: Explore books by genre and category.
+- **Browse Books**: Explore books by genre.
 - **Book Details**: View book ratings, authors, and summaries.
 - **Feedback System**: Users can submit feedback on books and platform experience.
 - **Responsive Design**: Optimized for both mobile and desktop users.
@@ -42,14 +42,18 @@ Ensure you have the following:
    ```sh
    npm install
    ```
-3. **Set up environment variables**:
+3. **Install dev dependencies (optional, for development purposes)**:
+   ```sh
+   npm install --only=dev
+   ```
+4. **Set up environment variables**:
    - Create a `config/dev.env` file (not included in the repository) and add the required environment variables:
      ```
      PORT=your_preferred_port_number
      MONGODB_URL=your_mongodb_connection_string
      JWT_SECRET=your_jwt_secret
      ```
-4. **Run the project**:
+5. **Run the project**:
    - For production mode:
      ```sh
      npm start
@@ -58,13 +62,12 @@ Ensure you have the following:
      ```sh
      npm run dev
      ```
-5. Open your browser and go to `http://localhost:3000` to access Bookify.
+6. Open your browser and go to `http://localhost:3000` to access Bookify.
 
 ## Usage
 
 - Register or log in to your account.
 - Browse books by categories.
-- View detailed book descriptions.
 - Read books directly from the platform.
 - Provide feedback to improve the platform.
 
