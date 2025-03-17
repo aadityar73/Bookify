@@ -44,8 +44,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (response.ok) {
         alert('Logged out successfully!');
 
-        localStorage.removeItem('previousPage');
-
         checkAuthStatus();
       } else {
         alert('Error logging out.');
@@ -55,3 +53,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const checkLoginAndRedirect = async bookURL => {
+  try {
+    const response = await fetch(`${API_URL}/users/me`, {
+      method: 'GET',
+      credentials: 'include',
+    });
+
+    if (response.ok) {
+      window.open(bookURL, '_blank');
+    } else {
+      localStorage.setItem('previousPage', window.location.href);
+      window.location.href = '/account/login';
+    }
+  } catch (error) {
+    throw new Error('Please sign in to read the book');
+  }
+};
