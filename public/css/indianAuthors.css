@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(to right bottom, #ffcc99, #99ff99);
+  background-color: #ffcc99;
+  background: -webkit-linear-gradient(to right bottom, #ffcc99, #99ff99);
+  background: -moz-linear-gradient(to right bottom, #ffcc99, #99ff99);
+  background: -o-linear-gradient(to right bottom, #ffcc99, #99ff99);
+  background: -ms-linear-gradient(to right bottom, #ffcc99, #99ff99);
+}
+
+.header {
+  background-color: rgba(204, 255, 204, 0.01);
+}
