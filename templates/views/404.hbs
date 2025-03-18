@@ -2,10 +2,36 @@
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap'
+      rel='stylesheet'
+    />
+
     <title>404</title>
+
+    <style>
+
+      * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family:
+      "Rubik", sans-serif; color: #333; background-color: #ebf5fb; display:
+      flex; justify-content: center; align-items: center; height: 100vh; }
+      .container { text-align: center; } .container * { margin-bottom: 18px; }
+      h1 { font-size: 80px; } .btn:link, .btn:visited { display: inline-block;
+      font-size: 18px; font-weight: 600; text-decoration: none; color: #fff;
+      background-color: #3498db; padding: 12px 24px; border: none;
+      border-radius: 7px; cursor: pointer; } .btn:hover, .btn:active {
+      background-color: #2f89c5; }
+
+    </style>
+
   </head>
   <body>
-    <h1>{{title}}</h1>
-    {{errorMessage}}
+    <div class='container'>
+      <h1>{{title}}</h1>
+      <p><em>{{errorMessage}}</em></p>
+      <a href='/' class='btn'>Take me home!</a>
+    </div>
   </body>
 </html>

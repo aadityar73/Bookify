@@ -82,7 +82,10 @@ app.use(categoriesRouter);
 app.use(favoritesRouter);
 
 app.get('*', (req, res) => {
-  res.render('404', { title: '404', errorMessage: 'Page not found' });
+  res.render('404', {
+    title: '404',
+    errorMessage: 'Oops! You seem lost. Let’s get you back on track!',
+  });
 });
 
 module.exports = app;
