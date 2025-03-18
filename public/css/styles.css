@@ -199,7 +199,7 @@
   color: #333;
 }
 
-.icon-mobile-nav[name="close-outline"] {
+.icon-mobile-nav[name='close-outline'] {
   display: none;
 }
 
@@ -633,9 +633,20 @@
       rgba(93, 173, 226, 0.35),
       rgb(52, 152, 219, 0.35)
     ),
-    url("../img/reading.png");
+    url('../img/reading.png');
   background-size: cover;
   background-position: center;
+}
+
+@supports (background-image: url('../img/reading.webp')) {
+  .feedback-img-box {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(93, 173, 226, 0.35),
+        rgb(52, 152, 219, 0.35)
+      ),
+      url('../img/reading.webp');
+  }
 }
 
 .feedback-form {
