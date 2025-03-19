@@ -14,7 +14,7 @@ router.post('/users', async (req, res) => {
   try {
     await user.save();
 
-    sendWelcomeEmail(user.email, user.name);
+    // sendWelcomeEmail(user.email, user.name);
 
     const token = await user.generateAuthToken();
 
@@ -24,7 +24,7 @@ router.post('/users', async (req, res) => {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'strict',
-        maxAge: 7 * 24 * 60 * 60 * 1000,
+        maxAge: 24 * 60 * 60 * 1000,
       })
       .send(user);
   } catch (err) {
