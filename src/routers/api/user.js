@@ -14,7 +14,7 @@ router.post('/users', async (req, res) => {
   try {
     await user.save();
 
-    // sendWelcomeEmail(user.email, user.name);
+    sendWelcomeEmail(user.email, user.name);
 
     const token = await user.generateAuthToken();
 
