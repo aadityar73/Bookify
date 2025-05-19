@@ -766,6 +766,18 @@
   color: #555;
 }
 
+.footer__author-link:link,
+.footer__author-link:visited {
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer__author-link:hover,
+.footer__author-link:active {
+  text-decoration: none;
+  color: #6a6a6a;
+}
+
 /* CATEGORIES PAGE */
 
 .grid-container {
