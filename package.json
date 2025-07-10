@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "env-cmd -f ./config/dev.env nodemon src/server.js -e js,hbs"
+    "dev": "nodemon src/server.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
