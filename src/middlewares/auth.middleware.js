@@ -1,5 +1,9 @@
 'use strict';
 
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
