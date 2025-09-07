@@ -1,13 +1,12 @@
 'use strict';
 
 import dotenv from 'dotenv';
+import jwt from 'jsonwebtoken';
+import User from '../models/user.model.js';
 
 dotenv.config();
 
-const jwt = require('jsonwebtoken');
-const User = require('../models/user');
-
-const auth = async (req, res, next) => {
+const requireAuth = async (req, res, next) => {
   try {
     const token = req.cookies.token;
 
@@ -35,4 +34,4 @@ const auth = async (req, res, next) => {
   }
 };
 
-module.exports = auth;
+export default requireAuth;

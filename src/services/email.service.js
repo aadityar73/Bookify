@@ -1,6 +1,7 @@
 'use strict';
 
 import dotenv from 'dotenv';
+import sgMail from '@sendgrid/mail';
 
 dotenv.config();
 
@@ -27,4 +28,4 @@ const sendWelcomeEmail = (email, name) => {
   });
 };
 
-module.exports = sendWelcomeEmail;
+export default sendWelcomeEmail;

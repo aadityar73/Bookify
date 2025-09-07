@@ -1,11 +1,11 @@
 'use strict';
 
-const express = require('express');
-const User = require('../../models/user');
-const auth = require('../../middleware/auth');
-const sendWelcomeEmail = require('../../emails/account');
+import { Router } from 'express';
+import User from '../../../models/user.model.js';
+import requireAuth from '../../../middlewares/auth.middleware.js';
+import sendWelcomeEmail from '../../../services/email.service.js';
 
-const router = new express.Router();
+const router = Router();
 
 // User Signup
 router.post('/users', async (req, res) => {
@@ -90,4 +90,4 @@ router.get('/users/me', auth, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

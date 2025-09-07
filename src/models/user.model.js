@@ -1,6 +1,10 @@
 'use strict';
 
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+import validator from 'validator';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
 
 dotenv.config();
 
@@ -75,4 +79,4 @@ userSchema.pre('save', async function () {
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User;

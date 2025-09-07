@@ -1,10 +1,10 @@
 'use strict';
 
-const express = require('express');
-const Feedback = require('../../models/feedback');
-const auth = require('../../middleware/auth');
+import { Router } from 'express';
+import Feedback from '../../../models/feedback.model.js';
+import requireAuth from '../../../middlewares/auth.middleware.js';
 
-const router = new express.Router();
+const router = Router();
 
 router.post('/feedbacks', auth, async (req, res) => {
   const { name, email } = req.user;
@@ -20,4 +20,4 @@ router.post('/feedbacks', auth, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

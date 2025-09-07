@@ -1,11 +1,11 @@
 'use strict';
 
-const express = require('express');
+import { Router } from 'express';
 
-const router = new express.Router();
+const router = Router();
 
 router.get('/youngAdult', (req, res) => {
   res.render('young-adult', { title: 'Young Adult Books' });
 });
 
-module.exports = router;
+export default router;

@@ -1,35 +1,36 @@
 'use strict';
 
-const path = require('path');
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const hbs = require('hbs');
-
-require('./db/mongoose');
+import path from 'path';
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import hbs from 'hbs';
+import db from './config/database.config.js';
 
 // Import api routes
-const userRouter = require('./routers/api/user');
-const feedbackRouter = require('./routers/api/feedback');
+import userRouter from './routes/api/user/user.route.js';
+import feedbackRouter from './routes/api/feedback/feedback.route.js';
 
 // Import book routes
-const fictionRouter = require('./routers/books/fiction');
-const nonFictionRouter = require('./routers/books/nonFiction');
-const businessRouter = require('./routers/books/business');
-const fantasyRouter = require('./routers/books/fantasy');
-const scienceFictionRouter = require('./routers/books/scienceFiction');
-const memoirRouter = require('./routers/books/memoir');
-const categoriesRouter = require('./routers/books/categories');
-const historicalFictionRouter = require('./routers/books/historicalFiction');
-const romanceRouter = require('./routers/books/romance');
-const indianAuthorsRouter = require('./routers/books/indianAuthors');
-const selfHelpRouter = require('./routers/books/selfHelp');
-const youngAdultRouter = require('./routers/books/youngAdult');
-const loginRouter = require('./routers/books/login');
-const registerRouter = require('./routers/books/register');
-const philosophyRouter = require('./routers/books/philosophy');
-const psychologyRouter = require('./routers/books/psychology');
-const mysteryRouter = require('./routers/books/mystery');
-const favoritesRouter = require('./routers/books/favorites');
+import fictionRouter from './routes/pages/books/fiction.route.js';
+import nonFictionRouter from './routes/pages/books/nonFiction.route.js';
+import businessRouter from './routes/pages/books/business.route.js';
+import fantasyRouter from './routes/pages/books/fantasy.route.js';
+import scienceFictionRouter from './routes/pages/books/scienceFiction.route.js';
+import memoirRouter from './routes/pages/books/memoir.route.js';
+import categoriesRouter from './routes/pages/books/categories.route.js';
+import historicalFictionRouter from './routes/pages/books/historicalFiction.route.js';
+import romanceRouter from './routes/pages/books/romance.route.js';
+import indianAuthorsRouter from './routes/pages/books/indianAuthors.route.js';
+import selfHelpRouter from './routes/pages/books/selfHelp.route.js';
+import youngAdultRouter from './routes/pages/books/youngAdult.route.js';
+import philosophyRouter from './routes/pages/books/philosophy.route.js';
+import psychologyRouter from './routes/pages/books/psychology.route.js';
+import mysteryRouter from './routes/pages/books/mystery.route.js';
+import favoritesRouter from './routes/pages/books/favorites.route.js';
+
+// Auth routes
+import loginRouter from './routes/pages/auth/login.route.js';
+import registerRouter from './routes/pages/auth/register.route.js';
 
 const app = express();
 
@@ -88,4 +89,4 @@ app.get('*', (req, res) => {
   });
 });
 
-module.exports = app;
+export default app;

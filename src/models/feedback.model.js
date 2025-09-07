@@ -1,7 +1,7 @@
 'use strict';
 
-const mongoose = require('mongoose');
-const validator = require('validator');
+import mongoose from 'mongoose';
+import validator from 'validator';
 
 const feedbackSchema = new mongoose.Schema(
   {
@@ -22,4 +22,4 @@ const feedbackSchema = new mongoose.Schema(
 
 const Feedback = mongoose.model('Feedback', feedbackSchema);
 
-module.exports = Feedback;
+export default Feedback;

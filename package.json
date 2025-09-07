@@ -1,7 +1,8 @@
 {
   "name": "bookify",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js -e js,hbs"

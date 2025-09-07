@@ -1,11 +1,11 @@
 'use strict';
 
-const express = require('express');
+import { Router } from 'express';
 
-const router = new express.Router();
+const router = Router();
 
 router.get('/categories', (req, res) => {
   res.render('categories', { title: 'Categories' });
 });
 
-module.exports = router;
+export default router;
