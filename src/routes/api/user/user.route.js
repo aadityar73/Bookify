@@ -14,7 +14,7 @@ router.post('/users', async (req, res) => {
   try {
     await user.save();
 
-    sendWelcomeEmail(user.email, user.name);
+    // sendWelcomeEmail(user.email, user.name);
 
     const token = await user.generateAuthToken();
 
@@ -56,7 +56,7 @@ router.post('/users/login', async (req, res) => {
 });
 
 // User Logout
-router.post('/users/logout', auth, async (req, res) => {
+router.post('/users/logout', requireAuth, async (req, res) => {
   try {
     req.user.tokens = req.user.tokens.filter(
       token => token.token !== req.token
@@ -70,7 +70,7 @@ router.post('/users/logout', auth, async (req, res) => {
 });
 
 // User Logout All
-router.post('/users/logoutAll', auth, async (req, res) => {
+router.post('/users/logoutAll', requireAuth, async (req, res) => {
   try {
     req.user.tokens = [];
     await req.user.save();
@@ -82,7 +82,7 @@ router.post('/users/logoutAll', auth, async (req, res) => {
 });
 
 // Get profile
-router.get('/users/me', auth, async (req, res) => {
+router.get('/users/me', requireAuth, async (req, res) => {
   try {
     res.status(200).send({ name: req.user.name, email: req.user.email });
   } catch (error) {

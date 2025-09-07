@@ -1,10 +1,7 @@
 'use strict';
 
-import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 import User from '../models/user.model.js';
-
-dotenv.config();
 
 const requireAuth = async (req, res, next) => {
   try {

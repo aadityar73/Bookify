@@ -1,17 +1,9 @@
 'use strict';
 
-import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import validator from 'validator';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
-
-dotenv.config();
-
-const mongoose = require('mongoose');
-const validator = require('validator');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema(
   {

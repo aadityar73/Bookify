@@ -1,10 +1,12 @@
 'use strict';
 
 import path from 'path';
+import { fileURLToPath } from 'url';
 import express from 'express';
+import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import hbs from 'hbs';
-import db from './config/database.config.js';
+import connectDB from './config/database.config.js';
 
 // Import api routes
 import userRouter from './routes/api/user/user.route.js';
@@ -32,12 +34,20 @@ import favoritesRouter from './routes/pages/books/favorites.route.js';
 import loginRouter from './routes/pages/auth/login.route.js';
 import registerRouter from './routes/pages/auth/register.route.js';
 
+dotenv.config();
 const app = express();
 
+// Connect DB
+connectDB();
+
+// Helpers for __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Define paths for Express config
-const publicDirectory = path.join(__dirname, '../public');
-const viewsPath = path.join(__dirname, '../templates/views');
-const partialsPath = path.join(__dirname, '../templates/partials');
+const publicDirectory = path.join(__dirname, 'public');
+const viewsPath = path.join(__dirname, 'views');
+const partialsPath = path.join(__dirname, 'views/includes');
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs');
@@ -52,16 +62,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-// Use api routes
-app.use(userRouter);
-app.use(feedbackRouter);
-
 // Use book routes
 app.get('', (req, res) => {
   res.render('index', {
     title: 'Your Literary Journey Awaits',
   });
 });
+
+// Use api routes
+app.use(userRouter);
+app.use(feedbackRouter);
 
 app.use(fictionRouter);
 app.use(nonFictionRouter);
@@ -82,11 +92,11 @@ app.use(indianAuthorsRouter);
 app.use(categoriesRouter);
 app.use(favoritesRouter);
 
-app.get('*', (req, res) => {
-  res.render('404', {
-    title: '404',
-    errorMessage: 'Oops! You seem lost. Let’s get you back on track!',
-  });
-});
+// app.get('/*', (req, res) => {
+//   res.render('404', {
+//     title: '404',
+//     errorMessage: 'Oops! You seem lost. Let’s get you back on track!',
+//   });
+// });
 
 export default app;

@@ -1,11 +1,6 @@
 'use strict';
 
-import dotenv from 'dotenv';
 import sgMail from '@sendgrid/mail';
-
-dotenv.config();
-
-const sgMail = require('@sendgrid/mail');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 

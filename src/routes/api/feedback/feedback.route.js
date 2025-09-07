@@ -6,7 +6,9 @@ import requireAuth from '../../../middlewares/auth.middleware.js';
 
 const router = Router();
 
-router.post('/feedbacks', auth, async (req, res) => {
+router.use(requireAuth);
+
+router.post('/feedbacks', async (req, res) => {
   const { name, email } = req.user;
   const feedbackMsg = req.body.feedback;
 
