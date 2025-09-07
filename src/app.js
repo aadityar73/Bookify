@@ -69,10 +69,6 @@ app.get('', (req, res) => {
   });
 });
 
-// Use api routes
-app.use(userRouter);
-app.use(feedbackRouter);
-
 app.use(fictionRouter);
 app.use(nonFictionRouter);
 app.use(historicalFictionRouter);
@@ -91,6 +87,10 @@ app.use(fantasyRouter);
 app.use(indianAuthorsRouter);
 app.use(categoriesRouter);
 app.use(favoritesRouter);
+
+// Use api routes
+app.use(userRouter);
+app.use(feedbackRouter);
 
 // app.get('/*', (req, res) => {
 //   res.render('404', {

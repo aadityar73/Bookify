@@ -5,7 +5,7 @@ import { Router } from 'express';
 const router = Router();
 
 router.get('/indianAuthors', (req, res) => {
-  res.render('indian-authors', { title: 'Indian Authors Books' });
+  res.render('pages/books/indian-authors', { title: 'Indian Authors Books' });
 });
 
 export default router;

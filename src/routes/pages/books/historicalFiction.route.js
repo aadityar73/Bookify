@@ -5,7 +5,9 @@ import { Router } from 'express';
 const router = Router();
 
 router.get('/historicalFiction', (req, res) => {
-  res.render('historical-fiction', { title: 'Historical Fiction Books' });
+  res.render('pages/books/historical-fiction', {
+    title: 'Historical Fiction Books',
+  });
 });
 
 export default router;
