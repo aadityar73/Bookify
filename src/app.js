@@ -17,8 +17,7 @@ import booksRouter from './routes/books/books.routes.js';
 import categoriesRouter from './routes/pages/categories.routes.js';
 
 // Auth routes
-import loginRouter from './routes/pages/auth/login.route.js';
-import registerRouter from './routes/pages/auth/register.route.js';
+import authRouter from './routes/auth/auth.routes.js';
 
 dotenv.config();
 const app = express();
@@ -58,8 +57,7 @@ app.get('', (req, res) => {
 app.use('/categories', categoriesRouter);
 app.use('/books', booksRouter);
 
-app.use(registerRouter);
-app.use(loginRouter);
+app.use('/account', authRouter);
 
 // Use api routes
 app.use(userRouter);
