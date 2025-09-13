@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import User from '../../models/user.model.js';
 
 const getRegister = (req, res) => {
-  res.render('pages/auth/register', { title: 'Join Now and Start Reading' });
+  res.render('auth/register', { title: 'Join Now and Start Reading' });
 };
 
 const postRegister = async (req, res) => {
@@ -31,7 +31,7 @@ const postRegister = async (req, res) => {
 };
 
 const getLogin = (req, res) => {
-  res.render('pages/auth/login', { title: 'Log into your account' });
+  res.render('auth/login', { title: 'Log into your account' });
 };
 
 const setAuthCookie = (res, userId) => {
