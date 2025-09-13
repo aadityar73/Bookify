@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
-import hbs from 'hbs';
+import expressLayouts from 'express-ejs-layouts';
 import connectDB from './config/database.config.js';
 
 // Import api routes
@@ -28,23 +28,23 @@ connectDB();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Define paths for Express config
-const publicDirectory = path.join(__dirname, 'public');
-const viewsPath = path.join(__dirname, 'views');
-const partialsPath = path.join(__dirname, 'views/includes');
-
-// Setup handlebars engine and views location
-app.set('view engine', 'hbs');
-app.set('views', viewsPath);
-hbs.registerPartials(partialsPath);
-
-// Setup static directory to serve
-app.use(express.static(publicDirectory));
-
-// Serve up JSON data sent by the client to the server
+// Parse incoming requests bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Parse cookies
 app.use(cookieParser());
+
+// Setup EJS engine and views location
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Setup layout middleware
+app.use(expressLayouts);
+app.set('layout', 'layout');
+
+// Serve static files
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.get('/', (req, res) => {
