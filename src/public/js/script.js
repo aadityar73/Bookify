@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Function to check the user's authentication status
   async function checkAuthStatus() {
     try {
-      const response = await fetch(`${API_URL}/users/me`, {
+      const response = await fetch(`${API_URL}/auth/me`, {
         method: 'GET',
         credentials: 'include',
       });
@@ -42,14 +42,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Handle login button click: store previous page and redirect to login page
   loginButton.addEventListener('click', () => {
     localStorage.setItem('previousPage', window.location.href);
-    window.location.href = '/account/login';
+    window.location.href = '/auth/login';
   });
 
   // Handle signout button click: send logout request to server
   signoutButton.addEventListener('click', async () => {
     try {
-      const response = await fetch(`${API_URL}/users/logout`, {
-        method: 'POST',
+      const response = await fetch(`${API_URL}/auth/logout`, {
+        method: 'GET',
         credentials: 'include',
       });
 
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Function to check if the user is logged in and allow reading the book if they are
 const checkLoginAndRedirect = async bookURL => {
   try {
-    const response = await fetch(`${API_URL}/users/me`, {
+    const response = await fetch(`${API_URL}/auth/me`, {
       method: 'GET',
       credentials: 'include',
     });
@@ -80,7 +80,7 @@ const checkLoginAndRedirect = async bookURL => {
       window.open(bookURL, '_blank');
     } else {
       localStorage.setItem('previousPage', window.location.href);
-      window.location.href = '/account/login';
+      window.location.href = '/auth/login';
     }
   } catch (error) {
     throw new Error('Please sign in to read the book');

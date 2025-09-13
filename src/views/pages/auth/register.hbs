@@ -21,7 +21,7 @@
       <nav class='main-nav'>
         <ul>
           <li>
-            <a href='/account/login'>
+            <a href='/auth/login'>
               <button type='button' class='btn btn--outline'>Log in</button>
             </a>
           </li>
@@ -33,7 +33,7 @@
       <div class='login-form'>
         <h2 class='heading-secondary ma-bt-lg'>Create your account!</h2>
         <form
-          action='/users'
+          action='/auth/register'
           method='POST'
           class='form form--signup'
           id='signup-form'
@@ -80,6 +80,5 @@
     </main>
 
     <script src='../js/config.js'></script>
-    <script src='../js/register.js'></script>
   </body>
 </html>

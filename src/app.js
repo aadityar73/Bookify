@@ -9,7 +9,6 @@ import hbs from 'hbs';
 import connectDB from './config/database.config.js';
 
 // Import api routes
-import userRouter from './routes/api/user/user.route.js';
 import feedbackRouter from './routes/api/feedback/feedback.route.js';
 
 // Import book routes
@@ -43,12 +42,12 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirectory));
 
 // Serve up JSON data sent by the client to the server
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Use book routes
-app.get('', (req, res) => {
+// Routes
+app.get('/', (req, res) => {
   res.render('index', {
     title: 'Your Literary Journey Awaits',
   });
@@ -57,14 +56,12 @@ app.get('', (req, res) => {
 app.use('/categories', categoriesRouter);
 app.use('/books', booksRouter);
 
-app.use('/account', authRouter);
+app.use('/auth', authRouter);
 
-// Use api routes
-app.use(userRouter);
-app.use(feedbackRouter);
+app.use('/feedback', feedbackRouter);
 
-// app.get('/*', (req, res) => {
-//   res.render('404', {
+// app.use((req, res) => {
+//   res.render('pages/error/404', {
 //     title: '404',
 //     errorMessage: 'Oops! You seem lost. Let’s get you back on track!',
 //   });
