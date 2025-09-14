@@ -1,207 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{>head}}
-  <link rel="stylesheet" href="/css/indianAuthors.css">
-  <body>
-    {{>booksHeader}}
+<section class="section-books" id="books">
+  <div class="container center-text">
+    <span class="sub-heading">Indian Authors</span>
+  </div>
 
-    <main>
-      <section class="section-books" id="books">
-        <div class="container center-text">
-          <span class="sub-heading">Indian Authors</span>
+  <div class="container grid grid--4-cols margin-bottom-md">
+    <div class="book" id="book120">
+      <img
+        src="../img/books/indian-1.jpg"
+        class="book-img"
+        alt="The God of Small Things"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
         </div>
-
-        <div class="container grid grid--4-cols margin-bottom-md">
-          <div class="book" id="book120">
+        <p class="book-title">The God of Small Things</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
             <img
-              src="../img/books/indian-1.jpg"
-              class="book-img"
-              alt="The God of Small Things"
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
             />
+            <span>By <strong class="author-text">Arundhati Roy</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>340</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>3.9</strong> rating (325,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/14QLJHNup5k2PjJHaiyqVUOdUxXW5l36U/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book120')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The God of Small Things</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Arundhati Roy</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>340</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>3.9</strong> rating (325,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/14QLJHNup5k2PjJHaiyqVUOdUxXW5l36U/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book120')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="book" id="book121">
+      <img
+        src="../img/books/indian-2.jpg"
+        class="book-img"
+        alt="2 States: The Story of My Marriage"
+      />
 
-          <div class="book" id="book121">
-            <img
-              src="../img/books/indian-2.jpg"
-              class="book-img"
-              alt="2 States: The Story of My Marriage"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--romance">Romance</span>
-              </div>
-              <p class="book-title">2 States: The Story of My Marriage</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Chetan Bhagat</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>269</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>3.7</strong> rating (116,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/16YAu6PTYcnTn395I2_p08El16vjeEbQo/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book121')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book122">
-            <img
-              src="../img/books/indian-3.jpg"
-              class="book-img"
-              alt="The White Tiger"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The White Tiger</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Aravind Adiga</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>321</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>3.7</strong> rating (151,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1jBOlSIi1aI3x3J0HlON8PzWPLyNRahJa/view?usp=sharing')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book122')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book123">
-            <img
-              src="../img/books/indian-4.jpg"
-              class="book-img"
-              alt="The Namesake"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The Namesake</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Jhumpa Lahiri</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>291</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.0</strong> rating (225,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1uEeLOW69-Cr9j1xYEdFT4RvD9TvJz5au/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book123')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--romance">Romance</span>
         </div>
-      </section>
-    </main>
+        <p class="book-title">2 States: The Story of My Marriage</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Chetan Bhagat</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>269</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>3.7</strong> rating (116,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/16YAu6PTYcnTn395I2_p08El16vjeEbQo/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book121')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-    {{>footer}}
+    <div class="book" id="book122">
+      <img
+        src="../img/books/indian-3.jpg"
+        class="book-img"
+        alt="The White Tiger"
+      />
 
-    <script src="../js/config.js"></script>
-    <script src="../js/script.js"></script>
-  </body>
-</html>
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">The White Tiger</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Aravind Adiga</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>321</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>3.7</strong> rating (151,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1jBOlSIi1aI3x3J0HlON8PzWPLyNRahJa/view?usp=sharing')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book122')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book123">
+      <img
+        src="../img/books/indian-4.jpg"
+        class="book-img"
+        alt="The Namesake"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">The Namesake</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Jhumpa Lahiri</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>291</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.0</strong> rating (225,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1uEeLOW69-Cr9j1xYEdFT4RvD9TvJz5au/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book123')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

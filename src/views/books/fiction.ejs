@@ -1,577 +1,539 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{>head}}
-  <body>
-    {{>booksHeader}}
+<section class="section-books" id="books">
+  <div class="container center-text">
+    <span class="sub-heading">Fiction</span>
+  </div>
 
-    <main>
-      <section class="section-books" id="books">
-        <div class="container center-text">
-          <span class="sub-heading">Fiction</span>
+  <div class="container grid grid--4-cols margin-bottom-md">
+    <div class="book" id="book34">
+      <img
+        src="../img/books/fiction-1.jpg"
+        class="book-img"
+        alt="The Alchemist"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
         </div>
-
-        <div class="container grid grid--4-cols margin-bottom-md">
-          <div class="book" id="book34">
+        <p class="book-title">The Alchemist</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
             <img
-              src="../img/books/fiction-1.jpg"
-              class="book-img"
-              alt="The Alchemist"
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
             />
+            <span>By <strong class="author-text">Paulo Coelho</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>197</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.1</strong> rating (2,399,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1gYXhee2HZh8wm_iPyakqHMYX47ZT5ecn/view?usp=sharing')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book34')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The Alchemist</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Paulo Coelho</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>197</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.1</strong> rating (2,399,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1gYXhee2HZh8wm_iPyakqHMYX47ZT5ecn/view?usp=sharing')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book34')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="book" id="book35">
+      <img
+        src="../img/books/fiction-2.jpg"
+        class="book-img"
+        alt="To Kill a Mockingbird"
+      />
 
-          <div class="book" id="book35">
-            <img
-              src="../img/books/fiction-2.jpg"
-              class="book-img"
-              alt="To Kill a Mockingbird"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">To Kill a Mockingbird</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Harper Lee</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>281</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.3</strong> rating (4,811,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/12OBP4mpQBJO7wscIPba7SfLFkuVspaKN/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book35')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book36">
-            <img
-              src="../img/books/fiction-3.jpg"
-              class="book-img"
-              alt="The Great Gatsby"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The Great Gatsby</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By
-                    <strong class="author-text"
-                      >F. Scott Fitzgerald</strong
-                    ></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>180</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>3.9</strong> rating (4,075,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/158gKU17X4qZWG0ow04rRx5Nmh0SKulnc/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book36')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book37">
-            <img src="../img/books/fiction-4.jpg" class="book-img" alt="1984" />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">1984</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">George Orwell</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>328</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.2</strong> rating (3,691,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/11p3uffTs_ijVMYC0GTT-wiOeYnAiUGBi/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book37')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book38">
-            <img
-              src="../img/books/fiction-5.jpg"
-              class="book-img"
-              alt="One Hundred Years of Solitude"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">One Hundred Years of Solitude</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By
-                    <strong class="author-text"
-                      >Gabriel García Márquez</strong
-                    ></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>417</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.1</strong> rating (882,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1tGzY5NikXAKedu71LvGNIUtBzVx-d9-O/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book38')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book39">
-            <img
-              src="../img/books/fiction-6.jpg"
-              class="book-img"
-              alt="The Catcher in the Rye"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The Catcher in the Rye</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">J.D. Salinger</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>277</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>3.8</strong> rating (2,928,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1FlFu_9TOROo2pHgnLk3H9ioG2syO0Ff1/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book39')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book40">
-            <img
-              src="../img/books/fiction-7.jpg"
-              class="book-img"
-              alt="The Goldfinch"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The Goldfinch</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Donna Tartt</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>771</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>3.9</strong> rating (721,026)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xfaXRGzttCsMqYgc-2aqnQ2_sOU6QNuR/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book40')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book41">
-            <img
-              src="../img/books/fiction-8.jpg"
-              class="book-img"
-              alt="The Handmaid's Tale"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The Handmaid's Tale</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By
-                    <strong class="author-text">Margaret Atwood</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>311</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.1</strong> rating (1,431,899)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    class="book"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xp-nAj9i9xg6CiwH2JzjrgLeYHV9QaDG/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book41')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book42">
-            <img
-              src="../img/books/fiction-9.jpg"
-              class="book-img"
-              alt="The Martian"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The Martian</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span>By <strong class="author-text">Andy Weir</strong></span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>387</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.4</strong> rating (823,632)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xoenv4yhjfWXV956JVclEs_vdfuaEhox/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book42')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book43">
-            <img
-              src="../img/books/fiction-10.jpg"
-              class="book-img"
-              alt="The Underground Railroad"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">The Underground Railroad</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By
-                    <strong class="author-text">Colson Whitehead</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>306</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.0</strong> rating (493,887)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xeN-gzG1CnYddpedPObRYYGrmitGMo5f/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book43')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book116">
-            <img
-              src="../img/books/fiction-11.jpg"
-              class="book-img"
-              alt="Where the Crawdads Sing"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">Where the Crawdads Sing</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Delia Owens</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>384</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.5</strong> rating (902,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1avV_SGuigKNAKLZ5xpJ5uEXw9geAVZ3T/view?usp=sharing')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book116')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book117">
-            <img
-              src="../img/books/fiction-12.jpg"
-              class="book-img"
-              alt="The Underground Railroad"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fiction">Fiction</span>
-              </div>
-              <p class="book-title">Crazy Rich Asians</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">Kevin Kwan</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>527</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>3.8</strong> rating (307,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1yp5HcqA0hw1SQIo72KAQr0ZULXPFKMLN/view?usp=sharing')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book117')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
         </div>
-      </section>
-    </main>
+        <p class="book-title">To Kill a Mockingbird</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Harper Lee</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>281</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.3</strong> rating (4,811,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/12OBP4mpQBJO7wscIPba7SfLFkuVspaKN/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book35')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-    {{>footer}}
+    <div class="book" id="book36">
+      <img
+        src="../img/books/fiction-3.jpg"
+        class="book-img"
+        alt="The Great Gatsby"
+      />
 
-    <script src="../js/config.js"></script>
-    <script src="../js/script.js"></script>
-  </body>
-</html>
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">The Great Gatsby</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span
+              >By <strong class="author-text">F. Scott Fitzgerald</strong></span
+            >
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>180</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>3.9</strong> rating (4,075,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/158gKU17X4qZWG0ow04rRx5Nmh0SKulnc/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book36')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book37">
+      <img src="../img/books/fiction-4.jpg" class="book-img" alt="1984" />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">1984</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">George Orwell</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>328</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.2</strong> rating (3,691,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/11p3uffTs_ijVMYC0GTT-wiOeYnAiUGBi/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book37')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book38">
+      <img
+        src="../img/books/fiction-5.jpg"
+        class="book-img"
+        alt="One Hundred Years of Solitude"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">One Hundred Years of Solitude</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span
+              >By
+              <strong class="author-text">Gabriel García Márquez</strong></span
+            >
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>417</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.1</strong> rating (882,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1tGzY5NikXAKedu71LvGNIUtBzVx-d9-O/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book38')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book39">
+      <img
+        src="../img/books/fiction-6.jpg"
+        class="book-img"
+        alt="The Catcher in the Rye"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">The Catcher in the Rye</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">J.D. Salinger</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>277</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>3.8</strong> rating (2,928,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1FlFu_9TOROo2pHgnLk3H9ioG2syO0Ff1/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book39')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book40">
+      <img
+        src="../img/books/fiction-7.jpg"
+        class="book-img"
+        alt="The Goldfinch"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">The Goldfinch</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Donna Tartt</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>771</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>3.9</strong> rating (721,026)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xfaXRGzttCsMqYgc-2aqnQ2_sOU6QNuR/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book40')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book41">
+      <img
+        src="../img/books/fiction-8.jpg"
+        class="book-img"
+        alt="The Handmaid's Tale"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">The Handmaid's Tale</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Margaret Atwood</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>311</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.1</strong> rating (1,431,899)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              class="book"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xp-nAj9i9xg6CiwH2JzjrgLeYHV9QaDG/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book41')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book42">
+      <img
+        src="../img/books/fiction-9.jpg"
+        class="book-img"
+        alt="The Martian"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">The Martian</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Andy Weir</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>387</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.4</strong> rating (823,632)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xoenv4yhjfWXV956JVclEs_vdfuaEhox/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book42')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book43">
+      <img
+        src="../img/books/fiction-10.jpg"
+        class="book-img"
+        alt="The Underground Railroad"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">The Underground Railroad</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span
+              >By <strong class="author-text">Colson Whitehead</strong></span
+            >
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>306</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.0</strong> rating (493,887)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1xeN-gzG1CnYddpedPObRYYGrmitGMo5f/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book43')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book116">
+      <img
+        src="../img/books/fiction-11.jpg"
+        class="book-img"
+        alt="Where the Crawdads Sing"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">Where the Crawdads Sing</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Delia Owens</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>384</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.5</strong> rating (902,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1avV_SGuigKNAKLZ5xpJ5uEXw9geAVZ3T/view?usp=sharing')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book116')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book117">
+      <img
+        src="../img/books/fiction-12.jpg"
+        class="book-img"
+        alt="The Underground Railroad"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fiction">Fiction</span>
+        </div>
+        <p class="book-title">Crazy Rich Asians</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">Kevin Kwan</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>527</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>3.8</strong> rating (307,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1yp5HcqA0hw1SQIo72KAQr0ZULXPFKMLN/view?usp=sharing')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book117')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

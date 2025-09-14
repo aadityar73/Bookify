@@ -1,140 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{>head}}
-  <body>
-    <header class="header">
-      <a href="/">
-        <img src="../img/bookify-logo.png" alt="Bookify logo" class="logo" />
-      </a>
+<section class="section-books" id="wishlist">
+  <div class="container center-text">
+    <span class="sub-heading">Favorites</span>
+  </div>
 
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li class="dropdown">
-            <a class="main-nav-link" href="/categories"
-              >Categories &dtrif;</a
-            >
-            <ul class="dropdown-menu">
-              <li>
-                <a class="main-nav-link nav-categories" href="/fiction">Fiction</a>
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/nonFiction"
-                  >Non-fiction</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/mystery"
-                  >Mystery/Thriller</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/romance">Romance</a>
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/scienceFiction"
-                  >Science Fiction</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/fantasy">Fantasy</a>
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/historicalFiction"
-                  >Historical Fiction</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/biography"
-                  >Biography/Memoir</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/selfHelp"
-                  >Self-Help</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="youngAdult"
-                  >Young Adult</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/philosophy"
-                  >Philosophy</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/business"
-                  >Business</a
-                >
-              </li>
-              <li>
-                <a class="main-nav-link nav-categories" href="/psychology"
-                  >Psychology</a
-                >
-              </li>
-              <li>
-                <a
-                  class="main-nav-link nav-categories link--indian-authors"
-                  href="/indianAuthors"
-                  >Indian Authors</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              class="main-nav-link nav-feedback"
-              id="login-btn"
-              href="/account/login"
-              >Login</a
-            >
-          </li>
-          <li>
-            <button
-              id="signout-btn"
-              style="display: none"
-              class="btn btn--sign-out"
-            >
-              Sign Out
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <button class="btn-mobile-nav">
-        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-      </button>
-    </header>
+  <div
+    id="wishlist-container"
+    class="container grid grid--3-cols margin-bottom-md"
+  >
+    <!-- Wishlist items will be dynamically added here -->
+  </div>
 
-    <main>
-      <section class="section-books" id="wishlist">
-        <div class="container center-text">
-          <span class="sub-heading">Favorites</span>
-        </div>
-
-        <div
-          id="wishlist-container"
-          class="container grid grid--3-cols margin-bottom-md"
-        >
-          <!-- Wishlist items will be dynamically added here -->
-        </div>
-
-        <div
-          id="loginMessage"
-          style="display: none"
-          class="empty-favorites-message"
-        >
-          <p class="heading-tertiary" style="margin-bottom: 0">
-            Please log in to add books to your favorites.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    {{>footer}}
-
-    <script src="../js/config.js"></script>
-    <script src="../js/script.js"></script>
-  </body>
-</html>
+  <div id="loginMessage" style="display: none" class="empty-favorites-message">
+    <p class="heading-tertiary" style="margin-bottom: 0">
+      Please log in to add books to your favorites.
+    </p>
+  </div>
+</section>

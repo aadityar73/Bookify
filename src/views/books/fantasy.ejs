@@ -1,346 +1,315 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{>head}}
-  <body>
-    {{>booksHeader}}
+<section class="section-books" id="books">
+  <div class="container center-text">
+    <span class="sub-heading">Fantasy</span>
+  </div>
 
-    <main>
-      <section class="section-books" id="books">
-        <div class="container center-text">
-          <span class="sub-heading">Fantasy</span>
+  <div class="container grid grid--4-cols margin-bottom-md">
+    <div class="book" id="book27">
+      <img
+        src="../img/books/harryPotter-1.jpg"
+        class="book-img"
+        alt="Harry Potter and the Sorcerer's Stone"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fantasy">Fantasy</span>
         </div>
-
-        <div class="container grid grid--4-cols margin-bottom-md">
-          <div class="book" id="book27">
+        <p class="book-title">Harry Potter and the Sorcerer's Stone</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
             <img
-              src="../img/books/harryPotter-1.jpg"
-              class="book-img"
-              alt="Harry Potter and the Sorcerer's Stone"
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
             />
+            <span>By <strong class="author-text">J.K. Rowling</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>223</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.5</strong> rating (7,799,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1wELS06HELvNhv6QlByZq2kjz4HhOVQsZ/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book27')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fantasy">Fantasy</span>
-              </div>
-              <p class="book-title">Harry Potter and the Sorcerer's Stone</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">J.K. Rowling</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>223</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.5</strong> rating (7,799,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1wELS06HELvNhv6QlByZq2kjz4HhOVQsZ/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book27')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="book" id="book28">
+      <img
+        src="../img/books/harryPotter-2.jpg"
+        class="book-img"
+        alt="Harry Potter and the Chamber of Secrets"
+      />
 
-          <div class="book" id="book28">
-            <img
-              src="../img/books/harryPotter-2.jpg"
-              class="book-img"
-              alt="Harry Potter and the Chamber of Secrets"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fantasy">Fantasy</span>
-              </div>
-              <p class="book-title">Harry Potter and the Chamber of Secrets</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">J.K. Rowling</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>251</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.4</strong> rating (3,178,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/19x4WVk7QX9k_RgytfEXkGsHJvQTV6gnX/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book28')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book29">
-            <img
-              src="../img/books/harryPotter-3.jpg"
-              class="book-img"
-              alt="Harry Potter and the Prisoner of Azkaban"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fantasy">Fantasy</span>
-              </div>
-              <p class="book-title">Harry Potter and the Prisoner of Azkaban</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">J.K. Rowling</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>317</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.5</strong> rating (3,380,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1k-7MmpqsElBHNdscypS9JkbDl-i-5Ys0/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book29')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book30">
-            <img
-              src="../img/books/harryPotter-4.jpg"
-              class="book-img"
-              alt="Harry Potter and the Goblet of Fire"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fantasy">Fantasy</span>
-              </div>
-              <p class="book-title">Harry Potter and the Goblet of Fire</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">J.K. Rowling</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>636</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.5</strong> rating (2,846,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1tWh5JAk_kHPsxmgPUIGcmJJ8-TqvO5FE/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book30')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book31">
-            <img
-              src="../img/books/harryPotter-5.jpg"
-              class="book-img"
-              alt="Harry Potter and the Order of the Phoenix"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fantasy">Fantasy</span>
-              </div>
-              <p class="book-title">
-                Harry Potter and the Order of the Phoenix
-              </p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">J.K. Rowling</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>766</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.6</strong> rating (2,833,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1rbgs9G2R-0MV3YMjSFx7V0W9PSFjNu-R/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book31')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book32">
-            <img
-              src="../img/books/harryPotter-6.jpg"
-              class="book-img"
-              alt="Harry Potter and the Half-Blood Prince"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fantasy">Fantasy</span>
-              </div>
-              <p class="book-title">Harry Potter and the Half-Blood Prince</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">J.K. Rowling</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>652</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.5</strong> rating (2,704,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1ZCoAm_62KYiomf3Z7WldVTRYLvRCZqwS/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book32')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="book" id="book33">
-            <img
-              src="../img/books/harryPotter-7.jpg"
-              class="book-img"
-              alt="Harry Potter and the Deathly Hallows"
-            />
-
-            <div class="book-content">
-              <div class="book-tags">
-                <span class="tag tag--fantasy">Fantasy</span>
-              </div>
-              <p class="book-title">Harry Potter and the Deathly Hallows</p>
-              <ul class="book-attributes">
-                <li class="book-attribute">
-                  <img
-                    src="../img/books/author-icon.png"
-                    class="book-icon author-icon"
-                  />
-                  <span
-                    >By <strong class="author-text">J.K. Rowling</strong></span
-                  >
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="book-outline"></ion-icon>
-                  <span><strong>759</strong> Pages</span>
-                </li>
-                <li class="book-attribute">
-                  <ion-icon class="book-icon" name="star-outline"></ion-icon>
-                  <span><strong>4.6</strong> rating (2,874,000)</span>
-                </li>
-                <li class="flex">
-                  <a
-                    class="btn btn--read"
-                    onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1po6GQWE-2ccqbXWRr4Gg36wrne3E-5oH/view?usp=drive_link')"
-                    >Read</a
-                  ><button
-                    class="btn btn--favorite"
-                    onclick="addToWishlist('book33')"
-                  >
-                    ❤️
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fantasy">Fantasy</span>
         </div>
-      </section>
-    </main>
+        <p class="book-title">Harry Potter and the Chamber of Secrets</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">J.K. Rowling</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>251</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.4</strong> rating (3,178,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/19x4WVk7QX9k_RgytfEXkGsHJvQTV6gnX/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book28')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-    {{>footer}}
+    <div class="book" id="book29">
+      <img
+        src="../img/books/harryPotter-3.jpg"
+        class="book-img"
+        alt="Harry Potter and the Prisoner of Azkaban"
+      />
 
-    <script src="../js/config.js"></script>
-    <script src="../js/script.js"></script>
-  </body>
-</html>
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fantasy">Fantasy</span>
+        </div>
+        <p class="book-title">Harry Potter and the Prisoner of Azkaban</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">J.K. Rowling</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>317</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.5</strong> rating (3,380,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1k-7MmpqsElBHNdscypS9JkbDl-i-5Ys0/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book29')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book30">
+      <img
+        src="../img/books/harryPotter-4.jpg"
+        class="book-img"
+        alt="Harry Potter and the Goblet of Fire"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fantasy">Fantasy</span>
+        </div>
+        <p class="book-title">Harry Potter and the Goblet of Fire</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">J.K. Rowling</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>636</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.5</strong> rating (2,846,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1tWh5JAk_kHPsxmgPUIGcmJJ8-TqvO5FE/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book30')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book31">
+      <img
+        src="../img/books/harryPotter-5.jpg"
+        class="book-img"
+        alt="Harry Potter and the Order of the Phoenix"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fantasy">Fantasy</span>
+        </div>
+        <p class="book-title">Harry Potter and the Order of the Phoenix</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">J.K. Rowling</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>766</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.6</strong> rating (2,833,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1rbgs9G2R-0MV3YMjSFx7V0W9PSFjNu-R/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book31')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book32">
+      <img
+        src="../img/books/harryPotter-6.jpg"
+        class="book-img"
+        alt="Harry Potter and the Half-Blood Prince"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fantasy">Fantasy</span>
+        </div>
+        <p class="book-title">Harry Potter and the Half-Blood Prince</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">J.K. Rowling</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>652</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.5</strong> rating (2,704,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1ZCoAm_62KYiomf3Z7WldVTRYLvRCZqwS/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book32')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="book" id="book33">
+      <img
+        src="../img/books/harryPotter-7.jpg"
+        class="book-img"
+        alt="Harry Potter and the Deathly Hallows"
+      />
+
+      <div class="book-content">
+        <div class="book-tags">
+          <span class="tag tag--fantasy">Fantasy</span>
+        </div>
+        <p class="book-title">Harry Potter and the Deathly Hallows</p>
+        <ul class="book-attributes">
+          <li class="book-attribute">
+            <img
+              src="../img/books/author-icon.png"
+              class="book-icon author-icon"
+            />
+            <span>By <strong class="author-text">J.K. Rowling</strong></span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="book-outline"></ion-icon>
+            <span><strong>759</strong> Pages</span>
+          </li>
+          <li class="book-attribute">
+            <ion-icon class="book-icon" name="star-outline"></ion-icon>
+            <span><strong>4.6</strong> rating (2,874,000)</span>
+          </li>
+          <li class="flex">
+            <a
+              class="btn btn--read"
+              onclick="checkLoginAndRedirect('https://drive.google.com/file/d/1po6GQWE-2ccqbXWRr4Gg36wrne3E-5oH/view?usp=drive_link')"
+              >Read</a
+            ><button
+              class="btn btn--favorite"
+              onclick="addToWishlist('book33')"
+            >
+              ❤️
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
