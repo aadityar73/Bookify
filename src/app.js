@@ -50,6 +50,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.render('index', {
     title: 'Your Literary Journey Awaits',
+    scripts: ['/js/home.js', '/js/feedback.js', '/js/script.js'],
   });
 });
 

@@ -1,0 +1,38 @@
+<header class="header">
+  <a href="/">
+    <img src="../img/bookify-logo.png" alt="Bookify logo" class="logo" />
+  </a>
+
+  <nav class="main-nav">
+    <ul class="main-nav-list">
+      <li><a class="main-nav-link" href="#books">Books</a></li>
+      <li class="dropdown">
+        <a class="main-nav-link" href="/categories">Categories &dtrif;</a>
+        <%- include('dropdown') %>
+      </li>
+      <li>
+        <a class="main-nav-link" href="#testimonials">Testimonials</a>
+      </li>
+      <li><a class="main-nav-link" href="#features">Features</a></li>
+      <li>
+        <a class="main-nav-link nav-feedback" id="login-btn" href="/auth/login"
+          >Login</a
+        >
+      </li>
+      <li>
+        <button
+          id="signout-btn"
+          style="display: none"
+          class="btn btn--sign-out"
+        >
+          Sign Out
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <button class="btn-mobile-nav">
+    <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+    <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+  </button>
+</header>

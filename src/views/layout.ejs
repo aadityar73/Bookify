@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% if(typeof authPage !== 'undefined' && authPage ) { %> <%-
+  include('partials/auth-head') %> <% } else { %> <%- include('partials/head')
+  %> <% } %>
+
+  <body>
+    <% if(typeof booksPage !== 'undefined' && booksPage) { %> <%-
+    include('partials/books-header') %> <% } else if(typeof authPage !==
+    'undefined' && authPage) { %> <%- include('partials/auth-header') %> <% }
+    else { %> <%- include('partials/header') %> <% } %>
+
+    <main><%- body %></main>
+
+    <% if(typeof authPage === 'undefined') { %>
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="/" class="footer-logo">
+            <img
+              src="../img/bookify-logo.png"
+              alt="Bookify logo"
+              class="logo"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://github.com/aadityar73"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-link"
+                ><ion-icon class="social-icon" name="logo-github"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/aadityaraikar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-link"
+                ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            &copy;
+            <span class="year">2023</span>
+            Bookify &bull; Designed & Developed by
+            <a
+              href="https://aadityaraikar.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__author-link"
+              >Aaditya Raikar</a
+            >. All rights reserved.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              404 Imaginary Street, Floor 42, Faketown, Mumbai, Maharashtra
+              000000, India
+            </p>
+            <p>
+              <a class="footer-link" href="tel:9867201035">+91 98672 01035</a>
+              <br />
+              <a class="footer-link" href="mailto:aaditya.raikar.dev@gmail.com">
+                aaditya.raikar.dev@gmail.com
+              </a>
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li>
+              <a class="footer-link" href="/auth/register">Create account</a>
+            </li>
+            <li><a class="footer-link" href="/auth/login">Sign in</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <% } %>
+
+    <script src="/js/config.js"></script>
+
+    <% if(typeof scripts !== 'undefined') { %> <% scripts.forEach(script => { %>
+    <script src="<%= script %>"></script>
+    <% }) %> <% } else if(typeof booksPage !== 'undefined' && booksPage) { %>
+    <script src="/js/script.js"></script>
+    <% } %>
+  </body>
+</html>

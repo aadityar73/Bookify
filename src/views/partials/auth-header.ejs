@@ -1,0 +1,21 @@
+<header class="header">
+  <a href="/">
+    <img src="../img/bookify-logo.png" alt="Bookify logo" class="logo" />
+  </a>
+
+  <nav class="main-nav">
+    <ul>
+      <li>
+        <% if(typeof isRegisterPage !== 'undefined' && isRegisterPage) { %>
+        <a href="/auth/login">
+          <button type="button" class="btn btn--outline">Log in</button>
+        </a>
+        <% } else { %>
+        <a href="/auth/register"
+          ><button type="button" class="btn btn--outline">Sign Up</button></a
+        >
+        <% } %>
+      </li>
+    </ul>
+  </nav>
+</header>
