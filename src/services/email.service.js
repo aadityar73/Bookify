@@ -1,26 +1,52 @@
-'use strict';
-
 import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const sendWelcomeEmail = (email, name) => {
-  sgMail.send({
+const sendVerificationMail = async (email, name, token) => {
+  const verifyUrl = `${process.env.API_URI}/verify-email?token=${token}&email=${email}`;
+
+  await sgMail.send({
     to: email,
-    from: {
-      email: 'aaditya.raikar.dev@gmail.com',
-      name: 'Aaditya from Bookify',
-    },
-    subject: 'Welcome to Bookify!',
-    text: `Welcome to Bookify, ${name}! I'm excited to have you here! Feel free to explore, read, and enjoy the collection. If you have any feedback or suggestions, I’d love to hear them!`,
+    from: { email: process.env.EMAIL_FROM, name: 'Aaditya from Bookify' },
+    subject: 'Verify your Bookify account',
     html: `
-      <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #222;">
-        <p>Welcome to <strong>Bookify</strong>, ${name}!</p>
-        <p>I'm excited to have you here! Feel free to explore and enjoy the collection. If you have any feedback or suggestions, I’d love to hear them!</p>
-        <p>Happy Reading!<br>— <strong>Aaditya Raikar</strong><br>Creator of Bookify</p>
+      <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #222">
+        <p>Hi <strong>${name}</strong>,</p>
+
+        <p>Thanks for signing up for <strong>Bookify</strong>! To get started, please verify your email address by clicking the link below:</p>
+        <p><a href="${verifyUrl}">Verify Email</a></p>
+
+        <p>This link will expire in <strong>30 minutes</strong> for security reasons.</p>
+        <p>If you didn't create an account, you can safely ignore this email.</p>
+
+        <p>Thanks,</p>
+        <p>— Aaditya Raikar<br><em>Creator of Bookify</em></p>
       </div>
     `,
   });
 };
 
-export default sendWelcomeEmail;
+const sendVerifiedMail = async (email, name) => {
+  await sgMail.send({
+    to: email,
+    from: { email: process.env.EMAIL_FROM, name: 'Aaditya from Bookify' },
+    subject: "✅ You're verified - Welcome to Bookify!",
+    html: `
+      <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #222">
+        <p>Hi <strong>${name}</strong>,</p>
+
+        <p>Thanks for verifying your email — and welcome to Bookify! 📚</p>
+
+        <p>You're all set to start exploring! Here's a place you might like to visit:</p>
+        <p><a href="https://bookify-fnct.onrender.com/categories">Explore Categories</a></p>
+
+        <p>If you have any feedback or suggestions, I'd love to hear them!</p>
+
+        <p>Happy reading,</p>
+        <p>— Aaditya Raikar<br><em>Creator of Bookify</em></p>
+      </div>
+    `,
+  });
+};
+
+export { sendVerificationMail, sendVerifiedMail };

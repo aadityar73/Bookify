@@ -18,6 +18,11 @@ const userSchema = new mongoose.Schema(
       },
     },
     password: { type: String, required: true, trim: true, minLength: 8 },
+    isVerified: { type: Boolean, default: false },
+
+    // Store hashed version of token (sha256) for security.
+    verificationToken: { type: String },
+    verificationTokenExpiry: { type: Date },
   },
   { timestamps: true }
 );
