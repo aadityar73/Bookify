@@ -82,6 +82,11 @@ const postLogin = async (req, res) => {
     const ok = await user.matchPassword(password);
     if (!ok) return res.status(401).send('Invalid credentials!');
 
+    if (!user.isVerified)
+      return res
+        .status(401)
+        .send('Please verify your email before logging in.');
+
     setAuthCookie(res, user._id);
     return res.redirect('/');
   } catch (err) {
