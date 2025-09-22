@@ -1,7 +1,10 @@
 import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
 import User from '../../models/user.model.js';
-import { sendVerificationMail } from '../../services/email.service.js';
+// import {
+//   sendVerificationMail,
+//   sendVerifiedMail,
+// } from '../../services/email.service.js';
 
 const getRegister = (req, res) => {
   res.render('auth/register', {
@@ -40,15 +43,39 @@ const postRegister = async (req, res) => {
     });
     await user.save();
 
-    await sendVerificationMail(email, name, token);
+    // await sendVerificationMail(email, name, token);
 
-    res.status(201).json({
-      message: 'Registeration successful. Please check your email to verify.',
-    });
+    res.status(201).redirect('/auth/login');
   } catch (err) {
-    return res.status(400).send(err);
+    return res.status(400).send(err.message);
   }
 };
+
+// const verifyEmail = async (req, res) => {
+//   try {
+//     const { token, email } = req.query;
+
+//     const user = await User.findOne({ email, verificationToken: token });
+
+//     if (!user) return res.status(404).send('Invalid verification link');
+
+//     if (user.verificationTokenExpiry < Date.now()) {
+//       return res.status(400).send('Verification link expired');
+//     }
+
+//     user.isVerified = true;
+//     user.verificationToken = token;
+//     user.verificationTokenExpiry = undefined;
+
+//     await user.save();
+
+//     await sendVerifiedMail(user.email, user.name);
+
+//     res.send('✅ Email verified successfully! You can now log in.');
+//   } catch (err) {
+//     res.status(500).send('Something went wrong');
+//   }
+// };
 
 const getLogin = (req, res) => {
   res.render('auth/login', { title: 'Log into your account', authPage: true });
@@ -82,10 +109,10 @@ const postLogin = async (req, res) => {
     const ok = await user.matchPassword(password);
     if (!ok) return res.status(401).send('Invalid credentials!');
 
-    if (!user.isVerified)
-      return res
-        .status(401)
-        .send('Please verify your email before logging in.');
+    // if (!user.isVerified)
+    //   return res
+    //     .status(401)
+    //     .send('Please verify your email before logging in.');
 
     setAuthCookie(res, user._id);
     return res.redirect('/');
@@ -108,4 +135,12 @@ const getMe = (req, res) => {
   });
 };
 
-export { getRegister, postRegister, getLogin, postLogin, logout, getMe };
+export {
+  getRegister,
+  postRegister,
+  // verifyEmail,
+  getLogin,
+  postLogin,
+  logout,
+  getMe,
+};

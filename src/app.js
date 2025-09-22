@@ -9,7 +9,7 @@ import expressLayouts from 'express-ejs-layouts';
 import connectDB from './config/database.config.js';
 
 // Import api routes
-import feedbackRouter from './routes/api/feedback/feedback.route.js';
+import feedbackRouter from './routes/feedback/feedback.routes.js';
 
 // Import book routes
 import booksRouter from './routes/books/books.routes.js';
@@ -59,7 +59,7 @@ app.use('/books', booksRouter);
 
 app.use('/auth', authRouter);
 
-app.use('/feedback', feedbackRouter);
+app.use('/feedbacks', feedbackRouter);
 
 // app.use((req, res) => {
 //   res.render('pages/error/404', {
