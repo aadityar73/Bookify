@@ -37,9 +37,9 @@ const postRegister = async (req, res) => {
       name,
       email,
       password,
-      verificationToken: token,
-      verificationTokenExpiry:
-        Date.now() + 1000 * 60 * process.env.VERIFICATION_TOKEN_EXPIRE_MINUTES,
+      // verificationToken: token,
+      // verificationTokenExpiry:
+      //   Date.now() + 1000 * 60 * process.env.VERIFICATION_TOKEN_EXPIRE_MINUTES,
     });
     await user.save();
 
