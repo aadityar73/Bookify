@@ -2,7 +2,7 @@ import { Router } from 'express';
 import {
   getRegister,
   postRegister,
-  // verifyEmail,
+  verifyEmail,
   getLogin,
   postLogin,
   logout,
@@ -14,7 +14,7 @@ const router = Router();
 
 router.get('/register', getRegister);
 router.post('/register', postRegister);
-// router.get('/verify-email', verifyEmail);
+router.get('/verify-email', verifyEmail);
 
 router.get('/login', getLogin);
 router.post('/login', postLogin);

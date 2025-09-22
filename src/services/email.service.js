@@ -1,19 +1,18 @@
-/*
-  import sgMail from '@sendgrid/mail';
+import sgMail from '@sendgrid/mail';
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  const sendVerificationMail = async (email, name, token) => {
-    const verifyUrl = `${process.env.API_URI}/auth/verify-email?token=${token}&email=${email}`;
+const sendVerificationMail = async (email, name, token) => {
+  const verifyUrl = `${process.env.API_URI}/auth/verify-email?token=${token}&email=${email}`;
 
-    await sgMail.send({
-      to: 'aaditya.raikar@somaiya.edu',
-      from: {
-        email: 'no-reply@em8932.aadityaraikar.tech',
-        name: 'Aaditya from Bookify',
-      },
-      subject: 'Verify your Bookify account',
-      html: `
+  await sgMail.send({
+    to: email,
+    from: {
+      email: 'no-reply@aadityaraikar.tech',
+      name: 'Aaditya from Bookify',
+    },
+    subject: 'Verify your Bookify account',
+    html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #222">
           <p>Hi <strong>${name}</strong>,</p>
 
@@ -27,18 +26,18 @@
           <p>— Aaditya Raikar<br><em>Creator of Bookify</em></p>
         </div>
       `,
-    });
-  };
+  });
+};
 
-  const sendVerifiedMail = async (email, name) => {
-    await sgMail.send({
-      to: email,
-      from: {
-        email: 'no-reply@aadityaraikar.tech',
-        name: 'Aaditya from Bookify',
-      },
-      subject: "✅ You're verified - Welcome to Bookify!",
-      html: `
+const sendVerifiedMail = async (email, name) => {
+  await sgMail.send({
+    to: email,
+    from: {
+      email: 'no-reply@aadityaraikar.tech',
+      name: 'Aaditya from Bookify',
+    },
+    subject: "✅ You're verified - Welcome to Bookify!",
+    html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #222">
           <p>Hi <strong>${name}</strong>,</p>
 
@@ -53,8 +52,7 @@
           <p>— Aaditya Raikar<br><em>Creator of Bookify</em></p>
         </div>
       `,
-    });
-  };
+  });
+};
 
-  export { sendVerificationMail, sendVerifiedMail };
-*/
+export { sendVerificationMail, sendVerifiedMail };

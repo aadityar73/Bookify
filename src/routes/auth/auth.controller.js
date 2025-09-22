@@ -1,10 +1,10 @@
 import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
 import User from '../../models/user.model.js';
-// import {
-//   sendVerificationMail,
-//   sendVerifiedMail,
-// } from '../../services/email.service.js';
+import {
+  sendVerificationMail,
+  sendVerifiedMail,
+} from '../../services/email.service.js';
 
 const getRegister = (req, res) => {
   res.render('auth/register', {
@@ -37,13 +37,15 @@ const postRegister = async (req, res) => {
       name,
       email,
       password,
-      // verificationToken: token,
-      // verificationTokenExpiry:
-      //   Date.now() + 1000 * 60 * process.env.VERIFICATION_TOKEN_EXPIRE_MINUTES,
+      verificationToken: token,
+      verificationTokenExpiry:
+        Date.now() + 1000 * 60 * process.env.VERIFICATION_TOKEN_EXPIRE_MINUTES,
     });
     await user.save();
 
-    // await sendVerificationMail(email, name, token);
+    await sendVerificationMail(email, name, token);
+
+    console.log('Email sent!');
 
     res.status(201).redirect('/auth/login');
   } catch (err) {
@@ -51,31 +53,31 @@ const postRegister = async (req, res) => {
   }
 };
 
-// const verifyEmail = async (req, res) => {
-//   try {
-//     const { token, email } = req.query;
+const verifyEmail = async (req, res) => {
+  try {
+    const { token, email } = req.query;
 
-//     const user = await User.findOne({ email, verificationToken: token });
+    const user = await User.findOne({ email, verificationToken: token });
 
-//     if (!user) return res.status(404).send('Invalid verification link');
+    if (!user) return res.status(404).send('Invalid verification link');
 
-//     if (user.verificationTokenExpiry < Date.now()) {
-//       return res.status(400).send('Verification link expired');
-//     }
+    if (user.verificationTokenExpiry < Date.now()) {
+      return res.status(400).send('Verification link expired');
+    }
 
-//     user.isVerified = true;
-//     user.verificationToken = token;
-//     user.verificationTokenExpiry = undefined;
+    user.isVerified = true;
+    user.verificationToken = token;
+    user.verificationTokenExpiry = undefined;
 
-//     await user.save();
+    await user.save();
 
-//     await sendVerifiedMail(user.email, user.name);
+    await sendVerifiedMail(user.email, user.name);
 
-//     res.send('✅ Email verified successfully! You can now log in.');
-//   } catch (err) {
-//     res.status(500).send('Something went wrong');
-//   }
-// };
+    res.send('✅ Email verified successfully! You can now log in.');
+  } catch (err) {
+    res.status(500).send('Something went wrong');
+  }
+};
 
 const getLogin = (req, res) => {
   res.render('auth/login', { title: 'Log into your account', authPage: true });
@@ -109,10 +111,10 @@ const postLogin = async (req, res) => {
     const ok = await user.matchPassword(password);
     if (!ok) return res.status(401).send('Invalid credentials!');
 
-    // if (!user.isVerified)
-    //   return res
-    //     .status(401)
-    //     .send('Please verify your email before logging in.');
+    if (!user.isVerified)
+      return res
+        .status(401)
+        .send('Please verify your email before logging in.');
 
     setAuthCookie(res, user._id);
     return res.redirect('/');
@@ -138,7 +140,7 @@ const getMe = (req, res) => {
 export {
   getRegister,
   postRegister,
-  // verifyEmail,
+  verifyEmail,
   getLogin,
   postLogin,
   logout,
