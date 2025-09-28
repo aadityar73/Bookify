@@ -26,7 +26,14 @@ const postRegister = async (req, res) => {
     // Check if user exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).send('User already exists!');
+      return res.status(400).send(
+        `
+          <script>
+            alert('User already exists!');
+            window.location.href='/auth/register';
+          </script>
+        `
+      );
     }
 
     // Generate token
@@ -103,15 +110,30 @@ const postLogin = async (req, res) => {
     }
 
     const user = await User.findOne({ email });
-    if (!user) return res.status(401).send('Invalid credentials!');
+    if (!user)
+      return res.status(401).send(`
+        <script>
+          alert('Invalid credentials!');
+          window.location.href='/auth/login';
+        </script>
+      `);
 
     const ok = await user.matchPassword(password);
-    if (!ok) return res.status(401).send('Invalid credentials!');
+    if (!ok)
+      return res.status(401).send(`
+        <script>
+          alert('Invalid credentials!');
+          window.location.href='/auth/login';
+        </script>
+      `);
 
     if (!user.isVerified)
-      return res
-        .status(401)
-        .send('Please verify your email before logging in.');
+      return res.status(401).send(`
+        <script>
+          alert('Please verify your email before logging in.');
+          window.location.href='/auth/login';
+        </script>
+      `);
 
     setAuthCookie(res, user._id);
     return res.redirect('/');
