@@ -38,14 +38,11 @@ const postRegister = async (req, res) => {
       email,
       password,
       verificationToken: token,
-      verificationTokenExpiry:
-        Date.now() + 1000 * 60 * process.env.VERIFICATION_TOKEN_EXPIRE_MINUTES,
+      verificationTokenExpiry: Date.now() + 1000 * 60 * 60 * 6,
     });
     await user.save();
 
     await sendVerificationMail(email, name, token);
-
-    console.log('Email sent!');
 
     res.status(201).redirect('/auth/login');
   } catch (err) {

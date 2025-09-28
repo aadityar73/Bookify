@@ -8,7 +8,7 @@ const sendVerificationMail = async (email, name, token) => {
   await sgMail.send({
     to: email,
     from: {
-      email: 'no-reply@aadityaraikar.tech',
+      email: process.env.EMAIL_FROM,
       name: 'Aaditya from Bookify',
     },
     subject: 'Verify your Bookify account',
@@ -33,7 +33,7 @@ const sendVerifiedMail = async (email, name) => {
   await sgMail.send({
     to: email,
     from: {
-      email: 'no-reply@aadityaraikar.tech',
+      email: process.env.EMAIL_FROM,
       name: 'Aaditya from Bookify',
     },
     subject: "✅ You're verified - Welcome to Bookify!",
