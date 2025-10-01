@@ -17,6 +17,7 @@ import categoriesRouter from './routes/pages/categories.routes.js';
 
 // Auth routes
 import authRouter from './routes/auth/auth.routes.js';
+import adminRouter from './routes/admin/admin.routes.js';
 
 dotenv.config();
 const app = express();
@@ -60,6 +61,8 @@ app.use('/books', booksRouter);
 app.use('/auth', authRouter);
 
 app.use('/feedbacks', feedbackRouter);
+
+app.use('/api/admin', adminRouter);
 
 // app.use((req, res) => {
 //   res.render('pages/error/404', {

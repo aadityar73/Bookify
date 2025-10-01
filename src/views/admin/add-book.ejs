@@ -1,0 +1,60 @@
+<main class="main">
+  <div class="book-form">
+    <h2 class="heading-secondary"><%= title %></h2>
+    <form action="/api/admin/books" method="POST">
+      <div class="form__group">
+        <label class="form__label">Title</label>
+        <input
+          type="text"
+          class="form__input"
+          name="title"
+          placeholder="Deep Work"
+          required
+        />
+      </div>
+
+      <div class="form__group">
+        <label class="form__label">Author</label>
+        <input
+          type="text"
+          class="form__input"
+          name="author"
+          placeholder="Cal Newport"
+          required
+        />
+      </div>
+      <div class="form__group">
+        <label class="form__label">Category</label>
+        <select name="category">
+          <option value="Self-Help">Self-Help</option>
+          <option value="Romance">Romance</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Business">Business</option>
+          <option value="Philosophy">Philosophy</option>
+          <option value="Psychology">Psychology</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label class="form__label">Pages</label>
+        <input
+          type="number"
+          class="form__input"
+          name="pages"
+          placeholder="304"
+        />
+      </div>
+      <div class="form__group">
+        <label class="form__label">Rating</label>
+        <input
+          type="text"
+          class="form__input"
+          name="rating"
+          placeholder="4.2"
+        />
+      </div>
+      <div class="form__group">
+        <button type="submit" class="btn btn--blue">Add Book</button>
+      </div>
+    </form>
+  </div>
+</main>
