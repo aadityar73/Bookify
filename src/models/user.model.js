@@ -15,6 +15,7 @@ const userSchema = new mongoose.Schema(
         if (!validator.isEmail(value)) throw new Error('Email is invalid');
       },
     },
+    isAdmin: { type: Boolean, default: false },
     password: { type: String, required: true, trim: true, minLength: 8 },
     isVerified: { type: Boolean, default: false },
 
