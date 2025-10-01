@@ -19,7 +19,7 @@ const sendVerificationMail = async (email, name, token) => {
           <p>Thanks for signing up for <strong>Bookify</strong>! To get started, please verify your email address by clicking the link below:</p>
           <p><a href="${verifyUrl}">Verify Email</a></p>
 
-          <p>This link will expire in <strong>30 minutes</strong> for security reasons.</p>
+          <p>This link will expire in <strong>6 hours</strong> for security reasons.</p>
           <p>If you didn't create an account, you can safely ignore this email.</p>
 
           <p>Thanks,</p>
